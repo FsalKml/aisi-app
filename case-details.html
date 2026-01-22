@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISI - Case Details</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo-small">
+                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="8" fill="#3B82F6"/>
+                    <path d="M24 12L32 20H28V32H20V20H16L24 12Z" fill="white"/>
+                </svg>
+            </div>
+            <h2>AISI</h2>
+        </div>
+
+        <div class="header-right">
+            <button class="notification-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                </svg>
+                <span class="notification-badge">3</span>
+            </button>
+
+            <div class="user-menu">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=3B82F6&color=fff" alt="User" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">Admin User</span>
+                    <span class="user-role">Jabatan Mufti</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="cases.html" class="nav-item active">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <span>Cases</span>
+            </a>
+
+            <a href="panel.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                </svg>
+                <span>Panel / Kaunselor</span>
+            </a>
+
+            <a href="sessions.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                </svg>
+                <span>Sessions</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                </svg>
+                <span>Reports</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                    <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <span>Archive</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <a href="#" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                </svg>
+                <span>Users</span>
+            </a>
+
+            <a href="#" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                </svg>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                </svg>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-title-section">
+                <a href="cases.html" class="back-link">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z" clip-rule="evenodd"/>
+                    </svg>
+                    Back to Cases
+                </a>
+                <h1 class="page-title">Case #IST-2025-001</h1>
+                <p class="page-subtitle">Created on Jan 10, 2025</p>
+            </div>
+        </div>
+
+        <div class="details-grid">
+            <!-- Plaintiff Information -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Plaintiff Information</h2>
+                </div>
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Full Name</label>
+                            <span>Ahmad bin Abdullah</span>
+                        </div>
+                        <div class="info-item">
+                            <label>IC Number</label>
+                            <span>901215-10-5847</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Race</label>
+                            <span>Malay</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Education Level</label>
+                            <span>Degree</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Contact Number</label>
+                            <span>012-3456789</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Case Information -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Case Information</h2>
+                </div>
+                <div class="card-body">
+                    <div class="info-grid">
+                        <div class="info-item">
+                            <label>Case ID</label>
+                            <span class="case-id">#IST-2025-001</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Status</label>
+                            <span class="badge badge-success">Active</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Created Date</label>
+                            <span>Jan 10, 2025</span>
+                        </div>
+                        <div class="info-item">
+                            <label>Religion to Convert</label>
+                            <span>Christianity</span>
+                        </div>
+                    </div>
+                    <div class="info-item full-width">
+                        <label>Case Description</label>
+                        <p class="description-text">Pemohon ingin menukar agama kepada Kristian. Beliau menyatakan telah menghadiri gereja bersama rakan sekerja sejak 2 tahun lalu dan merasakan lebih tenang dengan ajaran tersebut. Pemohon juga menyatakan kurang mendapat didikan agama Islam semasa kecil dan tidak mempunyai hubungan rapat dengan keluarga Muslim.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Assigned Panel -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Assigned Panel</h2>
+                </div>
+                <div class="card-body">
+                    <div class="panel-info-card">
+                        <img src="https://ui-avatars.com/api/?name=Dr+Ahmad+Ibrahim&background=3B82F6&color=fff" alt="Panel" class="panel-avatar-large">
+                        <div class="panel-details">
+                            <h3>Dr. Ahmad Ibrahim</h3>
+                            <p class="panel-role">Senior Panel Member</p>
+                            <div class="panel-contact">
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                    </svg>
+                                    dr.ahmad@jabatanmufti.gov.my
+                                </span>
+                                <span>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                    </svg>
+                                    03-8888 1234
+                                </span>
+                            </div>
+                        </div>
+                        <div class="match-badge">
+                            <span class="match-label">Match</span>
+                            <span class="match-value">92%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Session Progress -->
+            <div class="content-card">
+                <div class="card-header">
+                    <h2>Session Progress</h2>
+                    <span class="progress-summary">3 of 10 sessions completed</span>
+                </div>
+                <div class="card-body">
+                    <div class="session-progress-bar">
+                        <div class="session-progress-fill" style="width: 30%"></div>
+                    </div>
+                    <div class="sessions-timeline">
+                        <!-- Session 1 - Completed with data -->
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                                <div class="session-number">1</div>
+                                <div class="session-info">
+                                    <h4>Session 1</h4>
+                                    <p>Jan 12, 2025 - 10:00 AM</p>
+                                    <p class="session-venue">Bilik Kaunseling A, Tingkat 2</p>
+                                </div>
+                                <span class="download-letter-label">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-success">Completed</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <!-- Audio Recording Upload -->
+                                <div class="session-section">
+                                    <h5>Audio Recording</h5>
+                                    <div class="audio-uploaded">
+                                        <div class="audio-file">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>session1_recording.mp3</span>
+                                            <span class="audio-duration">45:23</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- Transcription -->
+                                <div class="session-section">
+                                    <h5>Transcription</h5>
+                                    <div class="transcription-box">
+                                        <p><strong>Panel:</strong> Assalamualaikum, terima kasih kerana hadir pada sesi ini. Boleh saya tahu apa yang mendorong saudara untuk memohon menukar agama?</p>
+                                        <p><strong>Plaintiff:</strong> Waalaikumsalam. Saya rasa saya tidak pernah benar-benar memahami Islam. Sejak kecil, keluarga saya tidak mengamalkan agama dengan baik...</p>
+                                        <p><strong>Panel:</strong> Saya faham. Boleh saudara ceritakan lebih lanjut tentang pengalaman saudara dengan agama semasa membesar?</p>
+                                        <p><strong>Plaintiff:</strong> Ibu bapa saya jarang solat dan saya tidak pernah dihantar ke kelas agama. Bila saya mula bekerja, rakan sekerja saya ajak pergi gereja dan saya rasa lebih diterima di sana...</p>
+                                        <p class="transcription-more">... [Click to view full transcription]</p>
+                                    </div>
+                                </div>
+
+                                <!-- Generated Report -->
+                                <div class="session-section">
+                                    <h5>Session Report</h5>
+                                    <div class="report-box">
+                                        <div class="report-header">
+                                            <span class="badge badge-info">Auto-generated</span>
+                                        </div>
+                                        <div class="report-content">
+                                            <p><strong>Summary:</strong> Plaintiff menyatakan kekurangan pendedahan kepada ajaran Islam semasa kecil sebagai faktor utama. Beliau merasa lebih diterima dalam komuniti Kristian melalui pengaruh rakan sekerja.</p>
+                                            <p><strong>Key Points:</strong></p>
+                                            <ul>
+                                                <li>Kurang didikan agama dari keluarga</li>
+                                                <li>Pengaruh rakan sekerja yang beragama Kristian</li>
+                                                <li>Perasaan diterima dalam komuniti gereja</li>
+                                            </ul>
+                                            <p><strong>Recommendation:</strong> Perlu pendekatan untuk memperkenalkan kembali asas-asas Islam dengan cara yang mudah difahami. Cadangan untuk sesi seterusnya fokus kepada konsep kasih sayang dalam Islam.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Session 2 - Completed with data -->
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                                <div class="session-number">2</div>
+                                <div class="session-info">
+                                    <h4>Session 2</h4>
+                                    <p>Jan 15, 2025 - 10:00 AM</p>
+                                    <p class="session-venue">Bilik Kaunseling A, Tingkat 2</p>
+                                </div>
+                                <span class="download-letter-label">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-success">Completed</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="session-section">
+                                    <h5>Audio Recording</h5>
+                                    <div class="audio-uploaded">
+                                        <div class="audio-file">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>session2_recording.mp3</span>
+                                            <span class="audio-duration">52:10</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Transcription</h5>
+                                    <div class="transcription-box">
+                                        <p><strong>Panel:</strong> Hari ini saya ingin berkongsi tentang konsep kasih sayang dalam Islam. Adakah saudara tahu bahawa setiap surah dalam Al-Quran bermula dengan "Dengan nama Allah Yang Maha Pemurah lagi Maha Penyayang"?</p>
+                                        <p><strong>Plaintiff:</strong> Saya pernah dengar tapi tidak pernah benar-benar faham maksudnya...</p>
+                                        <p class="transcription-more">... [Click to view full transcription]</p>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Session Report</h5>
+                                    <div class="report-box">
+                                        <div class="report-header">
+                                            <span class="badge badge-info">Auto-generated</span>
+                                        </div>
+                                        <div class="report-content">
+                                            <p><strong>Summary:</strong> Sesi fokus kepada pengenalan konsep kasih sayang dalam Islam. Plaintiff menunjukkan minat dan keterbukaan untuk memahami.</p>
+                                            <p><strong>Recommendation:</strong> Teruskan dengan topik berkaitan komuniti dan persaudaraan dalam Islam.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Session 3 - Completed with data -->
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                                <div class="session-number">3</div>
+                                <div class="session-info">
+                                    <h4>Session 3</h4>
+                                    <p>Jan 18, 2025 - 10:00 AM</p>
+                                    <p class="session-venue">Bilik Kaunseling B, Tingkat 2</p>
+                                </div>
+                                <span class="download-letter-label">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-success">Completed</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="session-section">
+                                    <h5>Audio Recording</h5>
+                                    <div class="audio-uploaded">
+                                        <div class="audio-file">
+                                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>session3_recording.mp3</span>
+                                            <span class="audio-duration">48:35</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Transcription</h5>
+                                    <div class="transcription-box">
+                                        <p><strong>Panel:</strong> Bagaimana perasaan saudara selepas sesi lepas?</p>
+                                        <p><strong>Plaintiff:</strong> Saya ada fikir tentang apa yang kita bincangkan. Ada beberapa perkara yang buat saya tertanya-tanya...</p>
+                                        <p class="transcription-more">... [Click to view full transcription]</p>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Session Report</h5>
+                                    <div class="report-box">
+                                        <div class="report-header">
+                                            <span class="badge badge-info">Auto-generated</span>
+                                        </div>
+                                        <div class="report-content">
+                                            <p><strong>Summary:</strong> Plaintiff mula menunjukkan tanda-tanda refleksi dan pertimbangan semula. Beliau menyatakan beberapa persoalan yang menunjukkan minat untuk memahami Islam dengan lebih mendalam.</p>
+                                            <p><strong>Recommendation:</strong> Jemput ahli keluarga atau komuniti Muslim untuk sesi sokongan.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Session 4 - Upcoming (no data yet, show upload form) -->
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item upcoming" onclick="toggleSession(this)">
+                                <div class="session-number">4</div>
+                                <div class="session-info">
+                                    <h4>Session 4</h4>
+                                    <p>Jan 22, 2025 - 10:00 AM</p>
+                                    <p class="session-venue">Bilik Kaunseling A, Tingkat 2</p>
+                                </div>
+                                <span class="download-letter-label">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-warning">Upcoming</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="session-section">
+                                    <h5>Audio Recording</h5>
+                                    <div class="audio-upload-area">
+                                        <input type="file" id="audioUpload4" accept=".mp3,.wav,.m4a" class="file-input">
+                                        <label for="audioUpload4" class="audio-upload-label">
+                                            <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                                            </svg>
+                                            <span>Upload audio recording</span>
+                                            <span class="upload-hint">MP3, WAV, or M4A (Max 100MB)</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Transcription</h5>
+                                    <div class="empty-state">
+                                        <p>Transcription will appear here after audio is uploaded</p>
+                                    </div>
+                                </div>
+                                <div class="session-section">
+                                    <h5>Session Report</h5>
+                                    <div class="empty-state">
+                                        <p>Report will be generated after transcription is complete</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Session 5-10 - Pending -->
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">5</div>
+                                <div class="session-info">
+                                    <h4>Session 5</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">6</div>
+                                <div class="session-info">
+                                    <h4>Session 6</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">7</div>
+                                <div class="session-info">
+                                    <h4>Session 7</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">8</div>
+                                <div class="session-info">
+                                    <h4>Session 8</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">9</div>
+                                <div class="session-info">
+                                    <h4>Session 9</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="session-collapsible">
+                            <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                                <div class="session-number">10</div>
+                                <div class="session-info">
+                                    <h4>Session 10</h4>
+                                    <p>Not scheduled</p>
+                                </div>
+                                <span class="download-letter-label disabled">Invitation Letter</span>
+                                <button class="btn-download-letter" onclick="event.stopPropagation()" title="Download Invitation Letter" disabled>
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                    </svg>
+                                </button>
+                                <span class="badge badge-secondary">Pending</span>
+                                <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                                </svg>
+                            </div>
+                            <div class="session-content">
+                                <div class="empty-state">
+                                    <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                    </div>
+    </main>
+
+    <script>
+        function toggleSession(element) {
+            const collapsible = element.closest('.session-collapsible');
+            collapsible.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>

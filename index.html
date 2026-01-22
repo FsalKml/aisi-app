@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISI - Login</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="48" height="48" rx="8" fill="#3B82F6"/>
+                        <path d="M24 12L32 20H28V32H20V20H16L24 12Z" fill="white"/>
+                    </svg>
+                </div>
+                <h1>AISI</h1>
+                <p>AI-Powered Istitabah Management System</p>
+            </div>
+
+            <!-- Login verification disabled for now - will implement later -->
+            <form class="login-form">
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email">
+                    <!-- required attribute commented out for now -->
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" placeholder="Enter your password">
+                    <!-- required attribute commented out for now -->
+                </div>
+
+                <div class="form-options">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="remember">
+                        <span>Remember me</span>
+                    </label>
+                    <a href="#" class="forgot-password">Forgot password?</a>
+                </div>
+
+                <!-- Direct link to dashboard for testing purposes -->
+                <a href="dashboard.html" class="btn-primary" style="display: block; text-align: center; text-decoration: none;">Sign in</a>
+                <!-- <button type="submit" class="btn-primary">Sign in</button> -->
+            </form>
+
+            <div class="login-footer">
+                <p>&copy; 2025 Jabatan Mufti. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

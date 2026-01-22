@@ -156,14 +156,119 @@
                     <p class="form-section-desc">Please review the information extracted from the uploaded document</p>
 
                     <div class="extracted-fields">
-                        <div class="form-group">
-                            <label for="plaintiffName">Plaintiff Name</label>
-                            <input type="text" id="plaintiffName" value="Ahmad bin Abdullah" class="form-input" readonly>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="plaintiffName">Plaintiff Name</label>
+                                <input type="text" id="plaintiffName" value="Ahmad bin Abdullah" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="icNumber">IC Number</label>
+                                <input type="text" id="icNumber" value="901215-10-5847" class="form-input">
+                            </div>
                         </div>
 
-                        <div class="form-group">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="race">Race</label>
+                                <select id="race" class="form-input">
+                                    <option value="malay" selected>Malay</option>
+                                    <option value="chinese">Chinese</option>
+                                    <option value="indian">Indian</option>
+                                    <option value="kadazan">Kadazan</option>
+                                    <option value="iban">Iban</option>
+                                    <option value="bidayuh">Bidayuh</option>
+                                    <option value="murut">Murut</option>
+                                    <option value="bajau">Bajau</option>
+                                    <option value="orang-asli">Orang Asli</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="text" id="age" value="34" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" id="phoneNumber" value="012-3456789" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="occupation">Occupation</label>
+                                <input type="text" id="occupation" value="Software Engineer" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="address1">Address 1</label>
+                            <input type="text" id="address1" value="No. 123, Jalan Merdeka" class="form-input">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="address2">Address 2</label>
+                            <input type="text" id="address2" value="Taman Harmoni" class="form-input">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="state">State</label>
+                            <select id="state" class="form-input">
+                                <option value="">Select State</option>
+                                <option value="johor">Johor</option>
+                                <option value="kedah">Kedah</option>
+                                <option value="kelantan">Kelantan</option>
+                                <option value="melaka">Melaka</option>
+                                <option value="negeri-sembilan">Negeri Sembilan</option>
+                                <option value="pahang">Pahang</option>
+                                <option value="penang">Penang</option>
+                                <option value="perak">Perak</option>
+                                <option value="perlis">Perlis</option>
+                                <option value="sabah">Sabah</option>
+                                <option value="sarawak">Sarawak</option>
+                                <option value="selangor" selected>Selangor</option>
+                                <option value="terengganu">Terengganu</option>
+                                <option value="wp-kuala-lumpur">WP Kuala Lumpur</option>
+                                <option value="wp-labuan">WP Labuan</option>
+                                <option value="wp-putrajaya">WP Putrajaya</option>
+                            </select>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="postcode">Postcode</label>
+                                <input type="text" id="postcode" value="40000" class="form-input">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">City</label>
+                                <input type="text" id="city" value="Shah Alam" class="form-input">
+                            </div>
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="country">Country</label>
+                            <input type="text" id="country" value="Malaysia" class="form-input">
+                        </div>
+
+                        <div class="form-group full-width">
+                            <label for="educationLevel">Education Level</label>
+                            <select id="educationLevel" class="form-input">
+                                <option value="">Select Education Level</option>
+                                <option value="primary">Primary School</option>
+                                <option value="secondary">Secondary School</option>
+                                <option value="diploma">Diploma</option>
+                                <option value="degree" selected>Degree</option>
+                                <option value="master">Master</option>
+                                <option value="phd">PhD</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group full-width">
                             <label for="caseDescription">Case Description</label>
-                            <textarea id="caseDescription" class="form-textarea" rows="4" readonly>Pemohon ingin menukar agama kepada Kristian. Beliau menyatakan telah menghadiri gereja bersama rakan sekerja sejak 2 tahun lalu dan merasakan lebih tenang dengan ajaran tersebut. Pemohon juga menyatakan kurang mendapat didikan agama Islam semasa kecil dan tidak mempunyai hubungan rapat dengan keluarga Muslim.</textarea>
+                            <textarea id="caseDescription" class="form-textarea" rows="7">Pemohon ingin menukar agama kepada Kristian. Beliau menyatakan telah menghadiri gereja bersama rakan sekerja sejak 2 tahun lalu dan merasakan lebih tenang dengan ajaran tersebut. Pemohon juga menyatakan kurang mendapat didikan agama Islam semasa kecil dan tidak mempunyai hubungan rapat dengan keluarga Muslim.</textarea>
                         </div>
                     </div>
                 </div>

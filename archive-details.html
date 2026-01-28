@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AISI - Case Details</title>
+    <title>AISI - Archive Details</title>
     <link rel="stylesheet" href="styles.css" />
     <!-- Quill Editor -->
     <link
@@ -172,7 +172,7 @@
           <span>Reports</span>
         </a>
 
-        <a href="archive.html" class="nav-item" data-menu="archive">
+        <a href="archive.html" class="nav-item active" data-menu="archive">
           <svg
             class="nav-icon"
             width="20"
@@ -260,19 +260,6 @@
           </a>
           <h1 class="page-title">Case #IST-2025-001</h1>
           <p class="page-subtitle">Created on Jan 10, 2025</p>
-        </div>
-        <div class="page-header-actions">
-          <button type="button" class="btn-archive">
-            <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-              <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
-              <path
-                fill-rule="evenodd"
-                d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            Archive
-          </button>
         </div>
       </div>
 
@@ -843,38 +830,18 @@
                 </div>
               </div>
 
-              <!-- Session 4 - Upcoming (no data yet, show upload form) -->
+              <!-- Session 4 - Not Completed -->
               <div class="session-collapsible">
                 <div
-                  class="session-timeline-item upcoming"
+                  class="session-timeline-item pending"
                   onclick="toggleSession(this)"
                 >
                   <div class="session-number">4</div>
                   <div class="session-info">
                     <h4>Session 4</h4>
-                    <p>Jan 22, 2025 - 10:00 AM</p>
-                    <p class="session-venue">Room A</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label">Invitation Letter</span>
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-warning">Upcoming</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -890,62 +857,14 @@
                   </svg>
                 </div>
                 <div class="session-content">
-                  <div class="session-section">
-                    <h5>Audio Recording</h5>
-                    <div class="audio-upload-area">
-                      <input
-                        type="file"
-                        id="audioUpload4"
-                        accept=".mp3,.wav,.m4a"
-                        class="file-input"
-                      />
-                      <label for="audioUpload4" class="audio-upload-label">
-                        <svg
-                          width="32"
-                          height="32"
-                          viewBox="0 0 20 20"
-                          fill="currentColor"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z"
-                            clip-rule="evenodd"
-                          />
-                        </svg>
-                        <span>Upload audio recording</span>
-                        <span class="upload-hint"
-                          >MP3, WAV, or M4A (Max 100MB)</span
-                        >
-                      </label>
-                    </div>
-                  </div>
-                  <div class="session-section">
-                    <h5>Transcription</h5>
-                    <div class="empty-state">
-                      <p>
-                        Transcription will appear here after audio is uploaded
-                      </p>
-                    </div>
-                  </div>
-                  <div class="session-section">
-                    <div class="section-header-row">
-                      <h5>Session Report</h5>
-                    </div>
-                    <div class="empty-state">
-                      <p>
-                        Report will be generated after transcription is complete
-                      </p>
-                    </div>
-                  </div>
-                  <div class="session-actions">
-                    <button class="btn-secondary">Save</button>
-                    <button class="btn-primary">Complete</button>
+                  <div class="empty-state">
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
 
-              <!-- Session 5-10 - Pending -->
-              <div class="session-collapsible" id="session5Collapsible">
+              <!-- Session 5-10 - Not Completed -->
+              <div class="session-collapsible">
                 <div
                   class="session-timeline-item pending"
                   onclick="toggleSession(this)"
@@ -953,49 +872,9 @@
                   <div class="session-number">5</div>
                   <div class="session-info">
                     <h4>Session 5</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <button
-                    class="btn-send-schedule"
-                    id="sendScheduleBtn"
-                    onclick="event.stopPropagation(); sendSchedule()"
-                    title="Send Schedule to Panel"
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
-                      />
-                    </svg>
-                    Send Schedule
-                  </button>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1011,11 +890,8 @@
                   </svg>
                 </div>
                 <div class="session-content">
-                  <div class="empty-state" id="session5EmptyState">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                  <div class="empty-state">
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1028,31 +904,9 @@
                   <div class="session-number">6</div>
                   <div class="session-info">
                     <h4>Session 6</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1069,10 +923,7 @@
                 </div>
                 <div class="session-content">
                   <div class="empty-state">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1085,31 +936,9 @@
                   <div class="session-number">7</div>
                   <div class="session-info">
                     <h4>Session 7</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1126,10 +955,7 @@
                 </div>
                 <div class="session-content">
                   <div class="empty-state">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1142,31 +968,9 @@
                   <div class="session-number">8</div>
                   <div class="session-info">
                     <h4>Session 8</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1183,10 +987,7 @@
                 </div>
                 <div class="session-content">
                   <div class="empty-state">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1199,31 +1000,9 @@
                   <div class="session-number">9</div>
                   <div class="session-info">
                     <h4>Session 9</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1240,10 +1019,7 @@
                 </div>
                 <div class="session-content">
                   <div class="empty-state">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1256,31 +1032,9 @@
                   <div class="session-number">10</div>
                   <div class="session-info">
                     <h4>Session 10</h4>
-                    <p>Not scheduled</p>
+                    <p>Not completed</p>
                   </div>
-                  <span class="download-letter-label disabled"
-                    >Invitation Letter</span
-                  >
-                  <button
-                    class="btn-download-letter"
-                    onclick="event.stopPropagation()"
-                    title="Download Invitation Letter"
-                    disabled
-                  >
-                    <svg
-                      width="16"
-                      height="16"
-                      viewBox="0 0 20 20"
-                      fill="currentColor"
-                    >
-                      <path
-                        fill-rule="evenodd"
-                        d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm3.293-7.707a1 1 0 011.414 0L9 10.586V3a1 1 0 112 0v7.586l1.293-1.293a1 1 0 111.414 1.414l-3 3a1 1 0 01-1.414 0l-3-3a1 1 0 010-1.414z"
-                        clip-rule="evenodd"
-                      />
-                    </svg>
-                  </button>
-                  <span class="badge badge-secondary">Pending</span>
+                  <span class="badge badge-secondary">Not Completed</span>
                   <svg
                     class="collapse-icon"
                     width="20"
@@ -1297,10 +1051,7 @@
                 </div>
                 <div class="session-content">
                   <div class="empty-state">
-                    <p>
-                      Session not yet scheduled. Content will be available after
-                      scheduling.
-                    </p>
+                    <p>This session was not completed.</p>
                   </div>
                 </div>
               </div>
@@ -1308,38 +1059,13 @@
           </div>
         </div>
 
-        <!-- Generate Final Report Button (Below Session Progress card) -->
-        <div class="generate-report-actions" id="generateReportActions">
-          <button
-            type="button"
-            class="btn-generate-report"
-            id="generateFinalReportBtn"
-            onclick="generateFinalReport()"
-          >
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 20 20"
-              fill="currentColor"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
-                clip-rule="evenodd"
-              />
-            </svg>
-            Generate Final Report
-          </button>
-        </div>
-
-        <!-- Final Report Card (Hidden by default, replaces generate button) -->
-        <div class="content-card final-report-card" id="finalReportSection" style="display: none;">
+        <!-- Final Report Card (Read-only) -->
+        <div class="content-card final-report-card">
           <div class="card-header">
             <h2>Final Case Report</h2>
             <button
               type="button"
               class="btn-download-final-report"
-              id="downloadFinalReportBtn"
               onclick="downloadFinalReport()"
             >
               <svg
@@ -1359,7 +1085,47 @@
           </div>
           <div class="card-body">
             <div class="quill-editor-container">
-              <div id="finalReportEditor" class="quill-editor"></div>
+              <div id="finalReportEditor" class="quill-editor">
+                <h2>Final Case Report</h2>
+                <p><strong>Case ID:</strong> #IST-2025-001</p>
+                <p><strong>Plaintiff:</strong> Ahmad bin Abdullah</p>
+                <p><strong>Panel:</strong> Dr. Ahmad Ibrahim</p>
+                <p><strong>Report Date:</strong> January 20, 2025</p>
+
+                <h3>Executive Summary</h3>
+                <p>This report summarizes the counseling sessions conducted with the plaintiff regarding their application to convert from Islam. Over the course of 3 completed sessions, significant progress has been observed in the plaintiff's understanding of Islamic teachings.</p>
+
+                <h3>Session Summaries</h3>
+                <p><strong>Session 1:</strong> Plaintiff menyatakan kekurangan pendedahan kepada ajaran Islam semasa kecil sebagai faktor utama. Beliau merasa lebih diterima dalam komuniti Kristian melalui pengaruh rakan sekerja.</p>
+                <ul>
+                  <li>Kurang didikan agama dari keluarga</li>
+                  <li>Pengaruh rakan sekerja yang beragama Kristian</li>
+                  <li>Perasaan diterima dalam komuniti gereja</li>
+                </ul>
+
+                <p><strong>Session 2:</strong> Sesi fokus kepada pengenalan konsep kasih sayang dalam Islam. Plaintiff menunjukkan minat dan keterbukaan untuk memahami.</p>
+
+                <p><strong>Session 3:</strong> Plaintiff mula menunjukkan tanda-tanda refleksi dan pertimbangan semula. Beliau menyatakan beberapa persoalan yang menunjukkan minat untuk memahami Islam dengan lebih mendalam.</p>
+
+                <h3>Key Observations</h3>
+                <ul>
+                  <li>Plaintiff shows willingness to learn about Islamic teachings</li>
+                  <li>Lack of proper Islamic education during childhood identified as main factor</li>
+                  <li>Positive response to discussions about mercy and compassion in Islam</li>
+                  <li>Beginning to question initial decision to convert</li>
+                </ul>
+
+                <h3>Recommendations</h3>
+                <ul>
+                  <li>Continue with remaining counseling sessions</li>
+                  <li>Involve family members or Muslim community for support</li>
+                  <li>Focus on practical aspects of Islamic faith in daily life</li>
+                  <li>Provide resources for self-study on Islamic teachings</li>
+                </ul>
+
+                <h3>Conclusion</h3>
+                <p>The counseling process is progressing positively. The plaintiff has shown openness to understanding Islam better and has begun to reflect on their initial decision. It is recommended to continue the remaining sessions with focus on building a supportive community connection.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -1368,134 +1134,25 @@
 
     <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
     <script>
-      // Set active sidebar menu based on URL parameter
-      (function() {
-        const urlParams = new URLSearchParams(window.location.search);
-        const from = urlParams.get('from') || 'cases';
-        const menuItem = document.querySelector(`[data-menu="${from}"]`);
-        if (menuItem) {
-          menuItem.classList.add('active');
-        }
-      })();
-
-      let finalReportQuill = null;
-
       function toggleSession(element) {
         const collapsible = element.closest(".session-collapsible");
         collapsible.classList.toggle("open");
       }
 
-      // Initialize Quill editors for session reports
-      document.querySelectorAll(".quill-editor:not(#finalReportEditor)").forEach((editor, index) => {
+      // Initialize Quill editors for session reports (read-only)
+      document.querySelectorAll(".quill-editor").forEach((editor, index) => {
         new Quill(editor, {
           theme: "snow",
+          readOnly: true,
           modules: {
-            toolbar: [
-              ["bold", "italic", "underline"],
-              [{ list: "ordered" }, { list: "bullet" }],
-              [{ header: [1, 2, 3, false] }],
-              ["clean"],
-            ],
+            toolbar: false,
           },
         });
       });
 
-      // Show/hide final report section when generate button is clicked
-      function generateFinalReport() {
-        const reportSection = document.getElementById("finalReportSection");
-        const generateBtnContainer = document.getElementById("generateReportActions");
-
-        // Hide the generate button container
-        generateBtnContainer.style.display = "none";
-
-        // Show the report card
-        reportSection.style.display = "block";
-
-        // Initialize Quill editor for final report if not already initialized
-        if (!finalReportQuill) {
-          finalReportQuill = new Quill("#finalReportEditor", {
-            theme: "snow",
-            modules: {
-              toolbar: [
-                ["bold", "italic", "underline"],
-                [{ list: "ordered" }, { list: "bullet" }],
-                [{ header: [1, 2, 3, false] }],
-                ["clean"],
-              ],
-            },
-          });
-
-          // Set dummy report content
-          const dummyReportContent = `
-<h2>Final Case Report</h2>
-<p><strong>Case ID:</strong> #IST-2025-001</p>
-<p><strong>Plaintiff:</strong> Ahmad bin Abdullah</p>
-<p><strong>Panel:</strong> Dr. Ahmad Ibrahim</p>
-<p><strong>Report Date:</strong> ${new Date().toLocaleDateString('en-MY', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-
-<h3>Executive Summary</h3>
-<p>This report summarizes the counseling sessions conducted with the plaintiff regarding their application to convert from Islam. Over the course of 3 completed sessions, significant progress has been observed in the plaintiff's understanding of Islamic teachings.</p>
-
-<h3>Session Summaries</h3>
-<p><strong>Session 1:</strong> Plaintiff menyatakan kekurangan pendedahan kepada ajaran Islam semasa kecil sebagai faktor utama. Beliau merasa lebih diterima dalam komuniti Kristian melalui pengaruh rakan sekerja.</p>
-<ul>
-<li>Kurang didikan agama dari keluarga</li>
-<li>Pengaruh rakan sekerja yang beragama Kristian</li>
-<li>Perasaan diterima dalam komuniti gereja</li>
-</ul>
-
-<p><strong>Session 2:</strong> Sesi fokus kepada pengenalan konsep kasih sayang dalam Islam. Plaintiff menunjukkan minat dan keterbukaan untuk memahami.</p>
-
-<p><strong>Session 3:</strong> Plaintiff mula menunjukkan tanda-tanda refleksi dan pertimbangan semula. Beliau menyatakan beberapa persoalan yang menunjukkan minat untuk memahami Islam dengan lebih mendalam.</p>
-
-<h3>Key Observations</h3>
-<ul>
-<li>Plaintiff shows willingness to learn about Islamic teachings</li>
-<li>Lack of proper Islamic education during childhood identified as main factor</li>
-<li>Positive response to discussions about mercy and compassion in Islam</li>
-<li>Beginning to question initial decision to convert</li>
-</ul>
-
-<h3>Recommendations</h3>
-<ul>
-<li>Continue with remaining counseling sessions</li>
-<li>Involve family members or Muslim community for support</li>
-<li>Focus on practical aspects of Islamic faith in daily life</li>
-<li>Provide resources for self-study on Islamic teachings</li>
-</ul>
-
-<h3>Conclusion</h3>
-<p>The counseling process is progressing positively. The plaintiff has shown openness to understanding Islam better and has begun to reflect on their initial decision. It is recommended to continue the remaining sessions with focus on building a supportive community connection.</p>
-          `;
-
-          finalReportQuill.root.innerHTML = dummyReportContent;
-        }
-
-        // Scroll to the report section
-        reportSection.scrollIntoView({ behavior: "smooth", block: "start" });
-      }
-
       // Placeholder for download function
       function downloadFinalReport() {
-        // Download functionality to be implemented
         alert("Download functionality will be implemented soon.");
-      }
-
-      // Send schedule to panel
-      function sendSchedule() {
-        const sendBtn = document.getElementById("sendScheduleBtn");
-        const emptyState = document.getElementById("session5EmptyState");
-
-        // Disable the button after clicking (but keep it visible)
-        sendBtn.disabled = true;
-        sendBtn.style.opacity = "0.6";
-        sendBtn.style.cursor = "not-allowed";
-
-        // Update the empty state message
-        emptyState.innerHTML = "<p>Waiting for panel confirmation.</p>";
-
-        // Show confirmation message
-        alert("Schedule has been sent to the panel. Waiting for panel confirmation.");
       }
     </script>
   </body>

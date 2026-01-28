@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AISI - User Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="dashboard-page">
+    <!-- Top Header -->
+    <header class="top-header">
+        <div class="header-left">
+            <div class="logo-small">
+                <svg width="32" height="32" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="48" height="48" rx="8" fill="#3B82F6"/>
+                    <path d="M24 12L32 20H28V32H20V20H16L24 12Z" fill="white"/>
+                </svg>
+            </div>
+            <h2>AISI</h2>
+        </div>
+
+        <div class="header-right">
+            <button class="notification-btn">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"/>
+                </svg>
+                <span class="notification-badge">3</span>
+            </button>
+
+            <div class="user-menu">
+                <img src="https://ui-avatars.com/api/?name=Admin+User&background=3B82F6&color=fff" alt="User" class="user-avatar">
+                <div class="user-info">
+                    <span class="user-name">Admin User</span>
+                    <span class="user-role">Jabatan Mufti</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                </svg>
+                <span>Dashboard</span>
+            </a>
+
+            <a href="cases.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <span>Cases</span>
+            </a>
+
+            <a href="cases-panel.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
+                </svg>
+                <span>Cases (Panel)</span>
+            </a>
+
+            <a href="panel.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                </svg>
+                <span>Panel / Kaunselor</span>
+            </a>
+
+            <a href="sessions.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
+                </svg>
+                <span>Sessions</span>
+            </a>
+
+            <a href="room.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z" clip-rule="evenodd"/>
+                </svg>
+                <span>Room</span>
+            </a>
+
+            <a href="reports.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z" clip-rule="evenodd"/>
+                </svg>
+                <span>Reports</span>
+            </a>
+
+            <a href="archive.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z"/>
+                    <path fill-rule="evenodd" d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z" clip-rule="evenodd"/>
+                </svg>
+                <span>Archive</span>
+            </a>
+
+            <div class="nav-divider"></div>
+
+            <a href="users.html" class="nav-item active">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                </svg>
+                <span>Users</span>
+            </a>
+
+            <a href="settings.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                </svg>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="index.html" class="nav-item">
+                <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"/>
+                </svg>
+                <span>Logout</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="page-title-section">
+                <h1 class="page-title">User Management</h1>
+                <p class="page-subtitle">Manage system users and their roles</p>
+            </div>
+            <button class="btn-primary" onclick="openAddUserModal()">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                </svg>
+                Add User
+            </button>
+        </div>
+
+        <!-- User Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon blue">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-title">Total Users</span>
+                    <p class="stat-number">25</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon purple">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-6-3a2 2 0 11-4 0 2 2 0 014 0zm-2 4a5 5 0 00-4.546 2.916A5.986 5.986 0 0010 16a5.986 5.986 0 004.546-2.084A5 5 0 0010 11z" clip-rule="evenodd"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-title">Superadmin</span>
+                    <p class="stat-number">1</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon green">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-title">Admin / Mufti</span>
+                    <p class="stat-number">4</p>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon orange">
+                    <svg viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z"/>
+                    </svg>
+                </div>
+                <div class="stat-content">
+                    <span class="stat-title">Panel / Kaunselor</span>
+                    <p class="stat-number">18</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Filters Section -->
+        <div class="content-card">
+            <div class="filters-section">
+                <div class="search-box">
+                    <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
+                    </svg>
+                    <input type="text" placeholder="Search by name or email..." class="search-input">
+                </div>
+
+                <div class="filter-group">
+                    <select class="filter-select">
+                        <option value="">All Roles</option>
+                        <option value="admin">Admin / Mufti</option>
+                        <option value="panel">Panel / Kaunselor</option>
+                    </select>
+
+                    <select class="filter-select">
+                        <option value="">All Status</option>
+                        <option value="active">Active</option>
+                        <option value="inactive">Inactive</option>
+                    </select>
+
+                    <button class="btn-text">Clear All</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Users Table -->
+        <div class="content-card">
+            <div class="card-header">
+                <div class="header-info">
+                    <h2>All Users</h2>
+                    <span class="result-count">Showing 10 of 25 users</span>
+                </div>
+            </div>
+
+            <div class="table-container">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th>User</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Status</th>
+                            <th>Last Login</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=System+Admin&background=8B5CF6&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">System Admin</span>
+                                </div>
+                            </td>
+                            <td>sysadmin@aisi.gov.my</td>
+                            <td><span class="role-badge superadmin">Superadmin</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 20, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('System Admin', 'sysadmin@aisi.gov.my', '+60 12-345 6789', 'Jabatan Mufti', 'Superadmin')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Admin+Master&background=10B981&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Admin Master</span>
+                                </div>
+                            </td>
+                            <td>admin.master@aisi.gov.my</td>
+                            <td><span class="role-badge admin">Admin / Mufti</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 19, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Admin Master', 'admin.master@aisi.gov.my', '+60 12-456 7890', 'Jabatan Mufti', 'Admin / Mufti')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Admin Master', 'admin.master@aisi.gov.my', '+60 12-456 7890', 'Jabatan Mufti', 'admin')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Admin Master')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Dato+Mufti&background=10B981&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Dato' Dr. Mufti Kelantan</span>
+                                </div>
+                            </td>
+                            <td>mufti.kelantan@aisi.gov.my</td>
+                            <td><span class="role-badge admin">Admin / Mufti</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 20, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Dato Dr. Mufti Kelantan', 'mufti.kelantan@aisi.gov.my', '+60 13-567 8901', 'Jabatan Mufti Kelantan', 'Admin / Mufti')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Dato Dr. Mufti Kelantan', 'mufti.kelantan@aisi.gov.my', '+60 13-567 8901', 'Jabatan Mufti Kelantan', 'admin')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Dato Dr. Mufti Kelantan')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Admin+User&background=10B981&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Admin User</span>
+                                </div>
+                            </td>
+                            <td>admin@aisi.gov.my</td>
+                            <td><span class="role-badge admin">Admin / Mufti</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 20, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Admin User', 'admin@aisi.gov.my', '+60 12-345 6789', 'Jabatan Mufti', 'Admin / Mufti')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Admin User', 'admin@aisi.gov.my', '+60 12-345 6789', 'Jabatan Mufti', 'admin')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Admin User')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Mohd+Razif&background=10B981&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Mohd Razif bin Abdullah</span>
+                                </div>
+                            </td>
+                            <td>razif.abdullah@aisi.gov.my</td>
+                            <td><span class="role-badge admin">Admin / Mufti</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 18, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Mohd Razif bin Abdullah', 'razif.abdullah@aisi.gov.my', '+60 14-678 9012', 'Jabatan Mufti', 'Admin / Mufti')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Mohd Razif bin Abdullah', 'razif.abdullah@aisi.gov.my', '+60 14-678 9012', 'Jabatan Mufti', 'admin')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Mohd Razif bin Abdullah')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Ahmad+Ibrahim&background=F59E0B&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Dr. Ahmad Ibrahim</span>
+                                </div>
+                            </td>
+                            <td>ahmad.ibrahim@aisi.gov.my</td>
+                            <td><span class="role-badge panel">Panel / Kaunselor</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 20, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Dr. Ahmad Ibrahim', 'ahmad.ibrahim@aisi.gov.my', '+60 15-789 0123', 'Panel Kaunseling', 'Panel / Kaunselor')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Dr. Ahmad Ibrahim', 'ahmad.ibrahim@aisi.gov.my', '+60 15-789 0123', 'Panel Kaunseling', 'panel')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Dr. Ahmad Ibrahim')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Fatimah+Zahra&background=F59E0B&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Dr. Fatimah Zahra</span>
+                                </div>
+                            </td>
+                            <td>fatimah.zahra@aisi.gov.my</td>
+                            <td><span class="role-badge panel">Panel / Kaunselor</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 19, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Dr. Fatimah Zahra', 'fatimah.zahra@aisi.gov.my', '+60 16-890 1234', 'Panel Kaunseling', 'Panel / Kaunselor')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Dr. Fatimah Zahra', 'fatimah.zahra@aisi.gov.my', '+60 16-890 1234', 'Panel Kaunseling', 'panel')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Dr. Fatimah Zahra')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Hassan+Ali&background=F59E0B&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Ustaz Hassan Ali</span>
+                                </div>
+                            </td>
+                            <td>hassan.ali@aisi.gov.my</td>
+                            <td><span class="role-badge panel">Panel / Kaunselor</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 18, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Ustaz Hassan Ali', 'hassan.ali@aisi.gov.my', '+60 17-901 2345', 'Panel Kaunseling', 'Panel / Kaunselor')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Ustaz Hassan Ali', 'hassan.ali@aisi.gov.my', '+60 17-901 2345', 'Panel Kaunseling', 'panel')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Ustaz Hassan Ali')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Noraini+Yusof&background=F59E0B&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Ustazah Noraini</span>
+                                </div>
+                            </td>
+                            <td>noraini.yusof@aisi.gov.my</td>
+                            <td><span class="role-badge panel">Panel / Kaunselor</span></td>
+                            <td><span class="badge badge-warning">Inactive</span></td>
+                            <td>Dec 15, 2024</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Ustazah Noraini', 'noraini.yusof@aisi.gov.my', '+60 18-012 3456', 'Panel Kaunseling', 'Panel / Kaunselor')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Ustazah Noraini', 'noraini.yusof@aisi.gov.my', '+60 18-012 3456', 'Panel Kaunseling', 'panel')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Ustazah Noraini')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="user-cell">
+                                    <img src="https://ui-avatars.com/api/?name=Zainuddin+Omar&background=F59E0B&color=fff" alt="User" class="user-avatar-small">
+                                    <span class="user-name-cell">Dr. Zainuddin Omar</span>
+                                </div>
+                            </td>
+                            <td>zainuddin.omar@aisi.gov.my</td>
+                            <td><span class="role-badge panel">Panel / Kaunselor</span></td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 17, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <button class="btn-icon-small" title="View" onclick="openViewUserModal('Dr. Zainuddin Omar', 'zainuddin.omar@aisi.gov.my', '+60 19-123 4567', 'Panel Kaunseling', 'Panel / Kaunselor')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small" title="Edit" onclick="openEditUserModal('Dr. Zainuddin Omar', 'zainuddin.omar@aisi.gov.my', '+60 19-123 4567', 'Panel Kaunseling', 'panel')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </button>
+                                    <button class="btn-icon-small btn-icon-danger" title="Delete" onclick="deleteUser('Dr. Zainuddin Omar')">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <span class="pagination-info">Showing <strong>1-10</strong> of <strong>25</strong> users</span>
+                <div class="pagination-controls">
+                    <button class="pagination-btn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                        Previous
+                    </button>
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                    </div>
+                    <button class="pagination-btn">
+                        Next
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Add/Edit User Modal -->
+    <div class="modal-overlay" id="userModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2 id="modalTitle">Add New User</h2>
+                <button class="modal-close" onclick="closeUserModal()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form id="userForm">
+                    <!-- Avatar Photo Section -->
+                    <div class="form-group">
+                        <label class="form-label">Avatar Photo</label>
+                        <div class="avatar-upload-section">
+                            <img id="avatarPreview" src="https://ui-avatars.com/api/?name=New+User&background=3B82F6&color=fff&size=80" alt="Avatar" class="avatar-preview">
+                            <div class="avatar-upload-actions">
+                                <label class="btn-secondary" for="avatarInput">
+                                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                        <path fill-rule="evenodd" d="M4 5a2 2 0 00-2 2v8a2 2 0 002 2h12a2 2 0 002-2V7a2 2 0 00-2-2h-1.586a1 1 0 01-.707-.293l-1.121-1.121A2 2 0 0011.172 3H8.828a2 2 0 00-1.414.586L6.293 4.707A1 1 0 015.586 5H4zm6 9a3 3 0 100-6 3 3 0 000 6z" clip-rule="evenodd"/>
+                                    </svg>
+                                    Change Photo
+                                </label>
+                                <input type="file" id="avatarInput" accept="image/*" style="display: none;" onchange="previewAvatar(event)">
+                                <button type="button" class="btn-text" onclick="removeAvatar()">Remove</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="userName">Full Name</label>
+                            <input type="text" id="userName" class="form-input" placeholder="Enter full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="userEmail">Email Address</label>
+                            <input type="email" id="userEmail" class="form-input" placeholder="Enter email address" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label class="form-label" for="userPhone">Phone Number</label>
+                            <input type="tel" id="userPhone" class="form-input" placeholder="Enter phone number" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="userDepartment">Department</label>
+                            <input type="text" id="userDepartment" class="form-input" placeholder="Enter department" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="userRole">Role</label>
+                        <select id="userRole" class="form-select" required>
+                            <option value="">Select a role</option>
+                            <option value="admin">Admin / Mufti</option>
+                            <option value="panel">Panel / Kaunselor</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeUserModal()">Cancel</button>
+                <button class="btn-primary" onclick="saveUser()">Save</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- View User Modal -->
+    <div class="modal-overlay" id="viewUserModal">
+        <div class="modal-content modal-large">
+            <div class="modal-header">
+                <h2>User Details</h2>
+                <button class="modal-close" onclick="closeViewUserModal()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="view-user-content">
+                    <div class="view-user-avatar">
+                        <img id="viewAvatarPreview" src="" alt="Avatar" class="avatar-preview-large">
+                    </div>
+                    <div class="view-user-info">
+                        <div class="info-row">
+                            <span class="info-label">Full Name</span>
+                            <span class="info-value" id="viewUserName"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Email Address</span>
+                            <span class="info-value" id="viewUserEmail"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Phone Number</span>
+                            <span class="info-value" id="viewUserPhone"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Department</span>
+                            <span class="info-value" id="viewUserDepartment"></span>
+                        </div>
+                        <div class="info-row">
+                            <span class="info-label">Role</span>
+                            <span class="info-value" id="viewUserRole"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-secondary" onclick="closeViewUserModal()">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Modal Functions
+        function openAddUserModal() {
+            document.getElementById('modalTitle').textContent = 'Add New User';
+            document.getElementById('userName').value = '';
+            document.getElementById('userEmail').value = '';
+            document.getElementById('userPhone').value = '';
+            document.getElementById('userDepartment').value = '';
+            document.getElementById('userRole').value = '';
+            document.getElementById('avatarPreview').src = 'https://ui-avatars.com/api/?name=New+User&background=3B82F6&color=fff&size=80';
+            document.getElementById('userModal').classList.add('active');
+        }
+
+        function openEditUserModal(name, email, phone, department, role) {
+            document.getElementById('modalTitle').textContent = 'Edit User';
+            document.getElementById('userName').value = name;
+            document.getElementById('userEmail').value = email;
+            document.getElementById('userPhone').value = phone;
+            document.getElementById('userDepartment').value = department;
+            document.getElementById('userRole').value = role;
+            // Update avatar preview with user's name
+            const initials = name.split(' ').map(n => n[0]).join('+');
+            const bgColor = role === 'admin' ? '10B981' : 'F59E0B';
+            document.getElementById('avatarPreview').src = `https://ui-avatars.com/api/?name=${initials}&background=${bgColor}&color=fff&size=80`;
+            document.getElementById('userModal').classList.add('active');
+        }
+
+        function closeUserModal() {
+            document.getElementById('userModal').classList.remove('active');
+        }
+
+        function openViewUserModal(name, email, phone, department, role) {
+            document.getElementById('viewUserName').textContent = name;
+            document.getElementById('viewUserEmail').textContent = email;
+            document.getElementById('viewUserPhone').textContent = phone;
+            document.getElementById('viewUserDepartment').textContent = department;
+            document.getElementById('viewUserRole').textContent = role;
+            // Update avatar preview with user's name
+            const initials = name.split(' ').map(n => n[0]).join('+');
+            let bgColor = 'F59E0B';
+            if (role === 'Superadmin') {
+                bgColor = '8B5CF6';
+            } else if (role === 'Admin / Mufti') {
+                bgColor = '10B981';
+            }
+            document.getElementById('viewAvatarPreview').src = `https://ui-avatars.com/api/?name=${initials}&background=${bgColor}&color=fff&size=100`;
+            document.getElementById('viewUserModal').classList.add('active');
+        }
+
+        function closeViewUserModal() {
+            document.getElementById('viewUserModal').classList.remove('active');
+        }
+
+        function deleteUser(name) {
+            if (confirm(`Are you sure you want to delete user "${name}"?`)) {
+                // For UI demo purposes, just show alert
+                alert(`User "${name}" has been deleted.`);
+            }
+        }
+
+        function saveUser() {
+            // For UI demo purposes, just close the modal
+            closeUserModal();
+            // In a real app, you would save the data here
+        }
+
+        function previewAvatar(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('avatarPreview').src = e.target.result;
+                };
+                reader.readAsDataURL(file);
+            }
+        }
+
+        function removeAvatar() {
+            const name = document.getElementById('userName').value || 'New User';
+            const initials = name.split(' ').map(n => n[0]).join('+');
+            document.getElementById('avatarPreview').src = `https://ui-avatars.com/api/?name=${initials}&background=3B82F6&color=fff&size=80`;
+            document.getElementById('avatarInput').value = '';
+        }
+
+        // Close modal when clicking outside
+        document.getElementById('userModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeUserModal();
+            }
+        });
+
+        document.getElementById('viewUserModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeViewUserModal();
+            }
+        });
+
+        // Close modal on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeUserModal();
+                closeViewUserModal();
+            }
+        });
+    </script>
+</body>
+</html>

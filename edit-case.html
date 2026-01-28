@@ -1,0 +1,983 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AISI - Edit Case</title>
+    <link rel="stylesheet" href="styles.css" />
+    <!-- Quill Editor -->
+    <link
+      href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dashboard-page">
+    <!-- Top Header -->
+    <header class="top-header">
+      <div class="header-left">
+        <div class="logo-small">
+          <svg
+            width="32"
+            height="32"
+            viewBox="0 0 48 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <rect width="48" height="48" rx="8" fill="#3B82F6" />
+            <path d="M24 12L32 20H28V32H20V20H16L24 12Z" fill="white" />
+          </svg>
+        </div>
+        <h2>AISI</h2>
+      </div>
+
+      <div class="header-right">
+        <button class="notification-btn">
+          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <path
+              d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"
+            />
+          </svg>
+          <span class="notification-badge">3</span>
+        </button>
+
+        <div class="user-menu">
+          <img
+            src="https://ui-avatars.com/api/?name=Admin+User&background=3B82F6&color=fff"
+            alt="User"
+            class="user-avatar"
+          />
+          <div class="user-info">
+            <span class="user-name">Admin User</span>
+            <span class="user-role">Jabatan Mufti</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <nav class="sidebar-nav">
+        <a href="dashboard.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"
+            />
+          </svg>
+          <span>Dashboard</span>
+        </a>
+
+        <a href="cases.html" class="nav-item active">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+            <path
+              fill-rule="evenodd"
+              d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Cases</span>
+        </a>
+
+        <a href="cases-panel.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+            <path
+              fill-rule="evenodd"
+              d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Cases (Panel)</span>
+        </a>
+
+        <a href="panel.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"
+            />
+          </svg>
+          <span>Panel / Kaunselor</span>
+        </a>
+
+        <a href="sessions.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"
+            />
+          </svg>
+          <span>Sessions</span>
+        </a>
+
+        <a href="room.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 4a2 2 0 012-2h8a2 2 0 012 2v12a1 1 0 110 2h-3a1 1 0 01-1-1v-2a1 1 0 00-1-1H9a1 1 0 00-1 1v2a1 1 0 01-1 1H4a1 1 0 110-2V4zm3 1h2v2H7V5zm2 4H7v2h2V9zm2-4h2v2h-2V5zm2 4h-2v2h2V9z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Room</span>
+        </a>
+
+        <a href="reports.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M4 4a2 2 0 012-2h4.586A2 2 0 0112 2.586L15.414 6A2 2 0 0116 7.414V16a2 2 0 01-2 2H6a2 2 0 01-2-2V4zm2 6a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm1 3a1 1 0 100 2h6a1 1 0 100-2H7z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Reports</span>
+        </a>
+
+        <a href="archive.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M4 3a2 2 0 100 4h12a2 2 0 100-4H4z" />
+            <path
+              fill-rule="evenodd"
+              d="M3 8h14v7a2 2 0 01-2 2H5a2 2 0 01-2-2V8zm5 3a1 1 0 011-1h2a1 1 0 110 2H9a1 1 0 01-1-1z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Archive</span>
+        </a>
+
+        <div class="nav-divider"></div>
+
+        <a href="users.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" />
+          </svg>
+          <span>Users</span>
+        </a>
+
+        <a href="settings.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Settings</span>
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <a href="index.html" class="nav-item">
+          <svg
+            class="nav-icon"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="currentColor"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z"
+              clip-rule="evenodd"
+            />
+          </svg>
+          <span>Logout</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <!-- Page Header -->
+      <div class="page-header">
+        <div class="page-title-section">
+          <a href="case-details.html" class="back-link">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+              <path
+                fill-rule="evenodd"
+                d="M9.707 16.707a1 1 0 01-1.414 0l-6-6a1 1 0 010-1.414l6-6a1 1 0 011.414 1.414L5.414 9H17a1 1 0 110 2H5.414l4.293 4.293a1 1 0 010 1.414z"
+                clip-rule="evenodd"
+              />
+            </svg>
+            Back to Case Details
+          </a>
+          <h1 class="page-title">Edit Case #IST-2025-001</h1>
+          <p class="page-subtitle">Modify case information and session details</p>
+        </div>
+      </div>
+
+      <form class="edit-case-form">
+        <div class="details-grid">
+          <!-- Plaintiff Information -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Plaintiff Information</h2>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="plaintiffName">Plaintiff Name</label>
+                  <input type="text" id="plaintiffName" class="form-input" value="Ahmad bin Abdullah" />
+                </div>
+                <div class="form-group">
+                  <label for="icNumber">IC Number</label>
+                  <input type="text" id="icNumber" class="form-input" value="901215-10-5847" />
+                </div>
+                <div class="form-group">
+                  <label for="age">Age</label>
+                  <input type="number" id="age" class="form-input" value="34" />
+                </div>
+                <div class="form-group">
+                  <label for="race">Race</label>
+                  <select id="race" class="form-input">
+                    <option value="Malay" selected>Malay</option>
+                    <option value="Chinese">Chinese</option>
+                    <option value="Indian">Indian</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="education">Education Level</label>
+                  <select id="education" class="form-input">
+                    <option value="SPM">SPM</option>
+                    <option value="STPM">STPM</option>
+                    <option value="Diploma">Diploma</option>
+                    <option value="Degree" selected>Degree</option>
+                    <option value="Masters">Masters</option>
+                    <option value="PhD">PhD</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="occupation">Occupation</label>
+                  <input type="text" id="occupation" class="form-input" value="Software Engineer" />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Phone Number</label>
+                  <input type="tel" id="phone" class="form-input" value="012-3456789" />
+                </div>
+                <div class="form-group full-width">
+                  <label for="address">Address</label>
+                  <textarea id="address" class="form-textarea" rows="3">No. 123, Jalan Merdeka
+Taman Harmoni
+40000 Shah Alam, Selangor
+Malaysia</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Case Information -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Case Information</h2>
+            </div>
+            <div class="card-body">
+              <div class="form-grid">
+                <div class="form-group">
+                  <label for="caseId">Case ID</label>
+                  <input type="text" id="caseId" class="form-input" value="#IST-2025-001" readonly />
+                </div>
+                <div class="form-group">
+                  <label for="status">Status</label>
+                  <select id="status" class="form-input">
+                    <option value="Active" selected>Active</option>
+                    <option value="Pending">Pending</option>
+                    <option value="Closed">Closed</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="createdDate">Created Date</label>
+                  <input type="date" id="createdDate" class="form-input" value="2025-01-10" />
+                </div>
+                <div class="form-group">
+                  <label for="religion">Religion to Convert</label>
+                  <select id="religion" class="form-input">
+                    <option value="Christianity" selected>Christianity</option>
+                    <option value="Buddhism">Buddhism</option>
+                    <option value="Hinduism">Hinduism</option>
+                    <option value="Other">Other</option>
+                  </select>
+                </div>
+                <div class="form-group full-width">
+                  <label for="description">Case Description</label>
+                  <textarea id="description" class="form-textarea" rows="4">Pemohon ingin menukar agama kepada Kristian. Beliau menyatakan telah menghadiri gereja bersama rakan sekerja sejak 2 tahun lalu dan merasakan lebih tenang dengan ajaran tersebut. Pemohon juga menyatakan kurang mendapat didikan agama Islam semasa kecil dan tidak mempunyai hubungan rapat dengan keluarga Muslim.</textarea>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Assigned Panel -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Assigned Panel</h2>
+              <button type="button" class="btn-secondary" onclick="togglePanelSelection()">
+                <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                  <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z" />
+                </svg>
+                Change Panel
+              </button>
+            </div>
+            <div class="card-body">
+              <!-- Current Panel -->
+              <div class="current-panel-display" id="currentPanelDisplay">
+                <div class="panel-info-card">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Dr+Ahmad+Ibrahim&background=3B82F6&color=fff"
+                    alt="Panel"
+                    class="panel-avatar-large"
+                  />
+                  <div class="panel-details">
+                    <h3>Dr. Ahmad Ibrahim</h3>
+                    <p class="panel-role">Senior Panel Member</p>
+                    <div class="panel-contact">
+                      <span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
+                          <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
+                        </svg>
+                        dr.ahmad@jabatanmufti.gov.my
+                      </span>
+                      <span>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
+                        </svg>
+                        03-8888 1234
+                      </span>
+                    </div>
+                  </div>
+                  <div class="match-badge">
+                    <span class="match-label">Match</span>
+                    <span class="match-value">92%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Panel Selection (Hidden by default) -->
+              <div class="panel-selection-list" id="panelSelectionList" style="display: none;">
+                <div class="panel-selection-card selected" onclick="selectPanel(this, 'Dr. Ahmad Ibrahim')">
+                  <div class="panel-selection-radio">
+                    <input type="radio" name="panel" value="ahmad" checked />
+                  </div>
+                  <img src="https://ui-avatars.com/api/?name=Dr+Ahmad+Ibrahim&background=3B82F6&color=fff" alt="Panel" class="panel-selection-avatar" />
+                  <div class="panel-selection-info">
+                    <h4>Dr. Ahmad Ibrahim</h4>
+                    <p>Senior Panel Member</p>
+                    <div class="panel-selection-stats">
+                      <span class="stat-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd" />
+                        </svg>
+                        12 Active Cases
+                      </span>
+                    </div>
+                  </div>
+                  <div class="panel-match-score">
+                    <span class="match-label">Match</span>
+                    <span class="match-value">92%</span>
+                  </div>
+                </div>
+
+                <div class="panel-selection-card" onclick="selectPanel(this, 'Ustaz Mohammed Ali')">
+                  <div class="panel-selection-radio">
+                    <input type="radio" name="panel" value="mohammed" />
+                  </div>
+                  <img src="https://ui-avatars.com/api/?name=Ustaz+Mohammed+Ali&background=10B981&color=fff" alt="Panel" class="panel-selection-avatar" />
+                  <div class="panel-selection-info">
+                    <h4>Ustaz Mohammed Ali</h4>
+                    <p>Panel Member</p>
+                    <div class="panel-selection-stats">
+                      <span class="stat-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd" />
+                        </svg>
+                        8 Active Cases
+                      </span>
+                    </div>
+                  </div>
+                  <div class="panel-match-score">
+                    <span class="match-label">Match</span>
+                    <span class="match-value">85%</span>
+                  </div>
+                </div>
+
+                <div class="panel-selection-card" onclick="selectPanel(this, 'Dr. Fatimah Hassan')">
+                  <div class="panel-selection-radio">
+                    <input type="radio" name="panel" value="fatimah" />
+                  </div>
+                  <img src="https://ui-avatars.com/api/?name=Dr+Fatimah+Hassan&background=8B5CF6&color=fff" alt="Panel" class="panel-selection-avatar" />
+                  <div class="panel-selection-info">
+                    <h4>Dr. Fatimah Hassan</h4>
+                    <p>Senior Panel Member</p>
+                    <div class="panel-selection-stats">
+                      <span class="stat-item">
+                        <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                          <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                          <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd" />
+                        </svg>
+                        10 Active Cases
+                      </span>
+                    </div>
+                  </div>
+                  <div class="panel-match-score">
+                    <span class="match-label">Match</span>
+                    <span class="match-value">78%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Session Progress -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Session Progress</h2>
+              <span class="progress-summary">3 of 10 sessions completed</span>
+            </div>
+            <div class="card-body">
+              <div class="session-progress-bar">
+                <div class="session-progress-fill" style="width: 30%"></div>
+              </div>
+              <div class="sessions-timeline">
+                <!-- Session 1 - Completed (Editable) -->
+                <div class="session-collapsible">
+                  <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                    <div class="session-number">1</div>
+                    <div class="session-info">
+                      <h4>Session 1</h4>
+                      <p>Jan 12, 2025 - 10:00 AM</p>
+                      <p class="session-venue">Room A</p>
+                    </div>
+                    <span class="badge badge-success">Completed</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="session1Date">Date</label>
+                        <input type="date" id="session1Date" class="form-input" value="2025-01-12" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session1Time">Time</label>
+                        <input type="time" id="session1Time" class="form-input" value="10:00" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session1Room">Room</label>
+                        <select id="session1Room" class="form-input">
+                          <option value="Room A" selected>Room A</option>
+                          <option value="Room B">Room B</option>
+                          <option value="Room C">Room C</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Audio Recording</h5>
+                      <div class="audio-reupload-area">
+                        <div class="current-audio">
+                          <div class="audio-file">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            <span>session1_recording.mp3</span>
+                            <span class="audio-duration">45:23</span>
+                          </div>
+                        </div>
+                        <div class="audio-upload-area compact">
+                          <input type="file" id="audioReupload1" accept=".mp3,.wav,.m4a" class="file-input" />
+                          <label for="audioReupload1" class="audio-upload-label compact">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Upload new audio</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Session Report</h5>
+                      <div class="quill-editor-container">
+                        <div class="quill-editor" id="session1Report">
+                          <p><strong>Summary:</strong> Plaintiff menyatakan kekurangan pendedahan kepada ajaran Islam semasa kecil sebagai faktor utama. Beliau merasa lebih diterima dalam komuniti Kristian melalui pengaruh rakan sekerja.</p>
+                          <p><strong>Key Points:</strong></p>
+                          <ul>
+                            <li>Kurang didikan agama dari keluarga</li>
+                            <li>Pengaruh rakan sekerja yang beragama Kristian</li>
+                            <li>Perasaan diterima dalam komuniti gereja</li>
+                          </ul>
+                          <p><strong>Recommendation:</strong> Perlu pendekatan untuk memperkenalkan kembali asas-asas Islam dengan cara yang mudah difahami.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Session 2 - Completed (Editable) -->
+                <div class="session-collapsible">
+                  <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                    <div class="session-number">2</div>
+                    <div class="session-info">
+                      <h4>Session 2</h4>
+                      <p>Jan 15, 2025 - 10:00 AM</p>
+                      <p class="session-venue">Room A</p>
+                    </div>
+                    <span class="badge badge-success">Completed</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="session2Date">Date</label>
+                        <input type="date" id="session2Date" class="form-input" value="2025-01-15" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session2Time">Time</label>
+                        <input type="time" id="session2Time" class="form-input" value="10:00" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session2Room">Room</label>
+                        <select id="session2Room" class="form-input">
+                          <option value="Room A" selected>Room A</option>
+                          <option value="Room B">Room B</option>
+                          <option value="Room C">Room C</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Audio Recording</h5>
+                      <div class="audio-reupload-area">
+                        <div class="current-audio">
+                          <div class="audio-file">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            <span>session2_recording.mp3</span>
+                            <span class="audio-duration">52:10</span>
+                          </div>
+                        </div>
+                        <div class="audio-upload-area compact">
+                          <input type="file" id="audioReupload2" accept=".mp3,.wav,.m4a" class="file-input" />
+                          <label for="audioReupload2" class="audio-upload-label compact">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Upload new audio</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Session Report</h5>
+                      <div class="quill-editor-container">
+                        <div class="quill-editor" id="session2Report">
+                          <p><strong>Summary:</strong> Sesi fokus kepada pengenalan konsep kasih sayang dalam Islam. Plaintiff menunjukkan minat dan keterbukaan untuk memahami.</p>
+                          <p><strong>Recommendation:</strong> Teruskan dengan topik berkaitan komuniti dan persaudaraan dalam Islam.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Session 3 - Completed (Editable) -->
+                <div class="session-collapsible">
+                  <div class="session-timeline-item completed" onclick="toggleSession(this)">
+                    <div class="session-number">3</div>
+                    <div class="session-info">
+                      <h4>Session 3</h4>
+                      <p>Jan 18, 2025 - 10:00 AM</p>
+                      <p class="session-venue">Room B</p>
+                    </div>
+                    <span class="badge badge-success">Completed</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="session3Date">Date</label>
+                        <input type="date" id="session3Date" class="form-input" value="2025-01-18" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session3Time">Time</label>
+                        <input type="time" id="session3Time" class="form-input" value="10:00" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session3Room">Room</label>
+                        <select id="session3Room" class="form-input">
+                          <option value="Room A">Room A</option>
+                          <option value="Room B" selected>Room B</option>
+                          <option value="Room C">Room C</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Audio Recording</h5>
+                      <div class="audio-reupload-area">
+                        <div class="current-audio">
+                          <div class="audio-file">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                            </svg>
+                            <span>session3_recording.mp3</span>
+                            <span class="audio-duration">48:35</span>
+                          </div>
+                        </div>
+                        <div class="audio-upload-area compact">
+                          <input type="file" id="audioReupload3" accept=".mp3,.wav,.m4a" class="file-input" />
+                          <label for="audioReupload3" class="audio-upload-label compact">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                              <path fill-rule="evenodd" d="M3 17a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM6.293 6.707a1 1 0 010-1.414l3-3a1 1 0 011.414 0l3 3a1 1 0 01-1.414 1.414L11 5.414V13a1 1 0 11-2 0V5.414L7.707 6.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+                            </svg>
+                            <span>Upload new audio</span>
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Session Report</h5>
+                      <div class="quill-editor-container">
+                        <div class="quill-editor" id="session3Report">
+                          <p><strong>Summary:</strong> Plaintiff mula menunjukkan tanda-tanda refleksi dan pertimbangan semula. Beliau menyatakan beberapa persoalan yang menunjukkan minat untuk memahami Islam dengan lebih mendalam.</p>
+                          <p><strong>Recommendation:</strong> Jemput ahli keluarga atau komuniti Muslim untuk sesi sokongan.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Session 4 - Upcoming (Editable) -->
+                <div class="session-collapsible">
+                  <div class="session-timeline-item upcoming" onclick="toggleSession(this)">
+                    <div class="session-number">4</div>
+                    <div class="session-info">
+                      <h4>Session 4</h4>
+                      <p>Jan 22, 2025 - 10:00 AM</p>
+                      <p class="session-venue">Room A</p>
+                    </div>
+                    <span class="badge badge-warning">Upcoming</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="form-grid">
+                      <div class="form-group">
+                        <label for="session4Date">Date</label>
+                        <input type="date" id="session4Date" class="form-input" value="2025-01-22" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session4Time">Time</label>
+                        <input type="time" id="session4Time" class="form-input" value="10:00" />
+                      </div>
+                      <div class="form-group">
+                        <label for="session4Room">Room</label>
+                        <select id="session4Room" class="form-input">
+                          <option value="Room A" selected>Room A</option>
+                          <option value="Room B">Room B</option>
+                          <option value="Room C">Room C</option>
+                        </select>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Audio Recording</h5>
+                      <div class="audio-upload-area">
+                        <input type="file" id="audioUpload4" accept=".mp3,.wav,.m4a" class="file-input" />
+                        <label for="audioUpload4" class="audio-upload-label">
+                          <svg width="32" height="32" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+                          </svg>
+                          <span>Upload audio recording</span>
+                          <span class="upload-hint">MP3, WAV, or M4A (Max 100MB)</span>
+                        </label>
+                      </div>
+                    </div>
+                    <div class="session-section">
+                      <h5>Session Report</h5>
+                      <div class="quill-editor-container">
+                        <div class="quill-editor" id="session4Report">
+                          <p>Report will be generated after session is completed.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Session 5-10 - Pending (Not Editable) -->
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">5</div>
+                    <div class="session-info">
+                      <h4>Session 5</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">6</div>
+                    <div class="session-info">
+                      <h4>Session 6</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">7</div>
+                    <div class="session-info">
+                      <h4>Session 7</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">8</div>
+                    <div class="session-info">
+                      <h4>Session 8</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">9</div>
+                    <div class="session-info">
+                      <h4>Session 9</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="session-collapsible">
+                  <div class="session-timeline-item pending" onclick="toggleSession(this)">
+                    <div class="session-number">10</div>
+                    <div class="session-info">
+                      <h4>Session 10</h4>
+                      <p>Not scheduled</p>
+                    </div>
+                    <span class="badge badge-secondary">Pending</span>
+                    <svg class="collapse-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <div class="session-content">
+                    <div class="empty-state">
+                      <p>Session not yet scheduled. Content will be available after scheduling.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Report (Editable) -->
+          <div class="content-card">
+            <div class="card-header">
+              <h2>Final Case Report</h2>
+            </div>
+            <div class="card-body">
+              <div class="quill-editor-container">
+                <div id="finalReportEditor" class="quill-editor">
+                  <h2>Final Case Report</h2>
+                  <p><strong>Case ID:</strong> #IST-2025-001</p>
+                  <p><strong>Plaintiff:</strong> Ahmad bin Abdullah</p>
+                  <p><strong>Panel:</strong> Dr. Ahmad Ibrahim</p>
+                  <p><strong>Report Date:</strong> January 27, 2025</p>
+
+                  <h3>Executive Summary</h3>
+                  <p>This report summarizes the counseling sessions conducted with the plaintiff regarding their application to convert from Islam. Over the course of 3 completed sessions, significant progress has been observed in the plaintiff's understanding of Islamic teachings.</p>
+
+                  <h3>Session Summaries</h3>
+                  <p><strong>Session 1:</strong> Plaintiff menyatakan kekurangan pendedahan kepada ajaran Islam semasa kecil sebagai faktor utama.</p>
+                  <p><strong>Session 2:</strong> Sesi fokus kepada pengenalan konsep kasih sayang dalam Islam.</p>
+                  <p><strong>Session 3:</strong> Plaintiff mula menunjukkan tanda-tanda refleksi dan pertimbangan semula.</p>
+
+                  <h3>Recommendations</h3>
+                  <ul>
+                    <li>Continue with remaining counseling sessions</li>
+                    <li>Involve family members or Muslim community for support</li>
+                    <li>Focus on practical aspects of Islamic faith in daily life</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Form Actions -->
+          <div class="form-actions-bottom">
+            <a href="case-details.html" class="btn-secondary">Cancel</a>
+            <button type="submit" class="btn-primary">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+              </svg>
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </form>
+    </main>
+
+    <script src="https://cdn.quilljs.com/1.3.7/quill.min.js"></script>
+    <script>
+      function toggleSession(element) {
+        const collapsible = element.closest(".session-collapsible");
+        collapsible.classList.toggle("open");
+      }
+
+      function togglePanelSelection() {
+        const currentDisplay = document.getElementById("currentPanelDisplay");
+        const selectionList = document.getElementById("panelSelectionList");
+
+        if (selectionList.style.display === "none") {
+          currentDisplay.style.display = "none";
+          selectionList.style.display = "block";
+        } else {
+          currentDisplay.style.display = "block";
+          selectionList.style.display = "none";
+        }
+      }
+
+      function selectPanel(card, panelName) {
+        // Remove selected class from all cards
+        document.querySelectorAll(".panel-selection-card").forEach(c => {
+          c.classList.remove("selected");
+          c.querySelector('input[type="radio"]').checked = false;
+        });
+
+        // Add selected class to clicked card
+        card.classList.add("selected");
+        card.querySelector('input[type="radio"]').checked = true;
+      }
+
+      // Initialize Quill editors for session reports
+      const quillOptions = {
+        theme: "snow",
+        modules: {
+          toolbar: [
+            ["bold", "italic", "underline"],
+            [{ list: "ordered" }, { list: "bullet" }],
+            [{ header: [1, 2, 3, false] }],
+            ["clean"],
+          ],
+        },
+      };
+
+      // Initialize session report editors
+      document.querySelectorAll(".quill-editor").forEach((editor) => {
+        new Quill(editor, quillOptions);
+      });
+    </script>
+  </body>
+</html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AISI - Sessions</title>
+    <title>AISI - Cases (Panel)</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body class="dashboard-page">
@@ -55,7 +55,7 @@
                 <span>Cases</span>
             </a>
 
-            <a href="cases-panel.html" class="nav-item">
+            <a href="cases-panel.html" class="nav-item active">
                 <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
                     <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/>
@@ -70,7 +70,7 @@
                 <span>Panel / Kaunselor</span>
             </a>
 
-            <a href="sessions.html" class="nav-item active">
+            <a href="sessions.html" class="nav-item">
                 <svg class="nav-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                     <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
                 </svg>
@@ -131,60 +131,15 @@
         <!-- Page Header -->
         <div class="page-header">
             <div class="page-title-section">
-                <h1 class="page-title">Counseling Sessions</h1>
-                <p class="page-subtitle">Track and manage all counseling sessions and recordings</p>
+                <h1 class="page-title">Cases Management (Panel)</h1>
+                <p class="page-subtitle">Manage all Istitabah cases and track counseling progress</p>
             </div>
-        </div>
-
-        <!-- Session Stats -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-icon purple">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-title">Today's Sessions</span>
-                    <p class="stat-number">8</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon blue">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                        <path d="M2 6a2 2 0 012-2h6a2 2 0 012 2v8a2 2 0 01-2 2H4a2 2 0 01-2-2V6zM14.553 7.106A1 1 0 0014 8v4a1 1 0 00.553.894l2 1A1 1 0 0018 13V7a1 1 0 00-1.447-.894l-2 1z"/>
-                    </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-title">In Progress</span>
-                    <p class="stat-number">1</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon green">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-title">Completed</span>
-                    <p class="stat-number">45</p>
-                </div>
-            </div>
-
-            <div class="stat-card">
-                <div class="stat-icon orange">
-                    <svg viewBox="0 0 20 20" fill="currentColor">
-                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                    </svg>
-                </div>
-                <div class="stat-content">
-                    <span class="stat-title">No-Show</span>
-                    <p class="stat-number">3</p>
-                </div>
-            </div>
+            <a href="add-case.html" class="btn-primary">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <path fill-rule="evenodd" d="M10 3a1 1 0 011 1v5h5a1 1 0 110 2h-5v5a1 1 0 11-2 0v-5H4a1 1 0 110-2h5V4a1 1 0 011-1z" clip-rule="evenodd"/>
+                </svg>
+                Add New Case
+            </a>
         </div>
 
         <!-- Filters Section -->
@@ -194,27 +149,17 @@
                     <svg class="search-icon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"/>
                     </svg>
-                    <input type="text" placeholder="Search by Case ID, Panel, or Room..." class="search-input">
+                    <input type="text" placeholder="Search by Case ID, Plaintiff ID, or Panel name..." class="search-input">
                 </div>
 
                 <div class="filter-group">
-                    <input type="date" class="filter-select" value="2025-01-20">
-
                     <select class="filter-select">
-                        <option value="">All Status</option>
-                        <option value="scheduled">Scheduled</option>
-                        <option value="in-progress">In Progress</option>
-                        <option value="completed">Completed</option>
+                        <option value="">All Statuses</option>
+                        <option value="active">Active</option>
+                        <option value="pending">Pending Assignment</option>
                         <option value="no-show">No-Show</option>
-                        <option value="cancelled">Cancelled</option>
-                    </select>
-
-                    <select class="filter-select">
-                        <option value="">All Rooms</option>
-                        <option value="room-a">Room A</option>
-                        <option value="room-b">Room B</option>
-                        <option value="room-c">Room C</option>
-                        <option value="room-d">Room D</option>
+                        <option value="completed">Completed</option>
+                        <option value="archived">Archived</option>
                     </select>
 
                     <select class="filter-select">
@@ -226,38 +171,42 @@
                         <option value="panel5">Dr. Zainuddin Omar</option>
                     </select>
 
+                    <select class="filter-select">
+                        <option value="">All Sessions</option>
+                        <option value="1-3">Sessions 1-3</option>
+                        <option value="4-6">Sessions 4-6</option>
+                        <option value="7-9">Sessions 7-9</option>
+                        <option value="10">Session 10</option>
+                    </select>
+
+                    <button class="btn-secondary">
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3 3a1 1 0 011-1h12a1 1 0 011 1v3a1 1 0 01-.293.707L12 11.414V15a1 1 0 01-.293.707l-2 2A1 1 0 018 17v-5.586L3.293 6.707A1 1 0 013 6V3z" clip-rule="evenodd"/>
+                        </svg>
+                        More Filters
+                    </button>
+
                     <button class="btn-text">Clear All</button>
                 </div>
             </div>
         </div>
 
-        <!-- Sessions Table -->
+        <!-- Cases Table -->
         <div class="content-card">
             <div class="card-header">
                 <div class="header-info">
-                    <h2>All Sessions</h2>
-                    <span class="result-count">Showing 10 sessions for today</span>
+                    <h2>All Cases</h2>
+                    <span class="result-count">Showing 15 of 24 cases</span>
                 </div>
-                <div class="header-actions">
-                    <button class="btn-icon" id="toggleViewBtn" title="Calendar View" onclick="toggleView()">
-                        <svg id="calendarIcon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-                            <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"/>
-                        </svg>
-                        <svg id="listIcon" width="20" height="20" viewBox="0 0 20 20" fill="currentColor" style="display: none;">
-                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"/>
-                        </svg>
-                    </button>
-                </div>
-            </div>
+                            </div>
 
-            <div class="table-container" id="tableView">
+            <div class="table-container">
                 <table class="data-table">
                     <thead>
                         <tr>
                             <th>Case ID</th>
-                            <th>Panel</th>
+                            <th>Panel / Kaunselor</th>
                             <th>Session Progress</th>
-                            <th>Room</th>
                             <th>Status</th>
                             <th>Date</th>
                             <th>Actions</th>
@@ -265,43 +214,8 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td><span class="case-id">#IST-2025-003</span></td>
-                            <td>Dr. Fatimah Zahra</td>
-                            <td>
-                                <div class="progress-indicator">
-                                    <span class="progress-text">7/10</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 70%"></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="room-badge">Room A</span></td>
-                            <td><span class="badge badge-info">In Progress</span></td>
-                            <td>Jan 20, 2025</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                    <a href="edit-case.html" class="btn-icon-small" title="Edit">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
-                                        </svg>
-                                    </a>
-                                    <button class="btn-icon-small" title="Delete">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
                             <td><span class="case-id">#IST-2025-001</span></td>
-                            <td>Dr. Ahmad Ibrahim</td>
+                                                        <td>Dr. Ahmad Ibrahim</td>
                             <td>
                                 <div class="progress-indicator">
                                     <span class="progress-text">3/10</span>
@@ -310,52 +224,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="room-badge">Room B</span></td>
-                            <td><span class="badge badge-success">Scheduled</span></td>
-                            <td>Jan 20, 2025</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 22, 2025</td>
                             <td>
                                 <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                                             <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                    <a href="edit-case.html" class="btn-icon-small" title="Edit">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
                                         </svg>
                                     </a>
-                                    <button class="btn-icon-small" title="Delete">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td><span class="case-id">#IST-2025-005</span></td>
-                            <td>Dr. Zainuddin Omar</td>
-                            <td>
-                                <div class="progress-indicator">
-                                    <span class="progress-text">2/10</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 20%"></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="room-badge">Room C</span></td>
-                            <td><span class="badge badge-success">Scheduled</span></td>
-                            <td>Jan 20, 2025</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
                                     <a href="edit-case.html" class="btn-icon-small" title="Edit">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
@@ -371,7 +249,7 @@
                         </tr>
                         <tr>
                             <td><span class="case-id">#IST-2025-002</span></td>
-                            <td>Ustaz Hassan Ali</td>
+                                                        <td>Ustaz Hassan Ali</td>
                             <td>
                                 <div class="progress-indicator">
                                     <span class="progress-text">1/10</span>
@@ -380,17 +258,16 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="room-badge">Room A</span></td>
-                            <td><span class="badge badge-success">Scheduled</span></td>
-                            <td>Jan 20, 2025</td>
+                            <td><span class="badge badge-warning">Pending</span></td>
+                            <td>Jan 23, 2025</td>
                             <td>
                                 <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                                             <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
                                         </svg>
-                                    </button>
+                                    </a>
                                     <a href="edit-case.html" class="btn-icon-small" title="Edit">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
@@ -404,28 +281,27 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="completed-row">
-                            <td><span class="case-id">#IST-2025-007</span></td>
-                            <td>Dr. Ahmad Ibrahim</td>
+                        <tr>
+                            <td><span class="case-id">#IST-2025-003</span></td>
+                                                        <td>Dr. Fatimah Zahra</td>
                             <td>
                                 <div class="progress-indicator">
-                                    <span class="progress-text">4/10</span>
+                                    <span class="progress-text">7/10</span>
                                     <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 40%"></div>
+                                        <div class="progress-fill" style="width: 70%"></div>
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="room-badge">Room B</span></td>
-                            <td><span class="badge badge-success">Completed</span></td>
-                            <td>Jan 19, 2025</td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 21, 2025</td>
                             <td>
                                 <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                                             <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
                                         </svg>
-                                    </button>
+                                    </a>
                                     <a href="edit-case.html" class="btn-icon-small" title="Edit">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
@@ -439,44 +315,9 @@
                                 </div>
                             </td>
                         </tr>
-                        <tr class="completed-row">
-                            <td><span class="case-id">#IST-2025-008</span></td>
-                            <td>Ustazah Noraini</td>
-                            <td>
-                                <div class="progress-indicator">
-                                    <span class="progress-text">6/10</span>
-                                    <div class="progress-bar">
-                                        <div class="progress-fill" style="width: 60%"></div>
-                                    </div>
-                                </div>
-                            </td>
-                            <td><span class="room-badge">Room D</span></td>
-                            <td><span class="badge badge-success">Completed</span></td>
-                            <td>Jan 19, 2025</td>
-                            <td>
-                                <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
-                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                    <a href="edit-case.html" class="btn-icon-small" title="Edit">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
-                                        </svg>
-                                    </a>
-                                    <button class="btn-icon-small" title="Delete">
-                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
-                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </td>
-                        </tr>
-                        <tr class="noshow-row">
+                        <tr>
                             <td><span class="case-id">#IST-2025-004</span></td>
-                            <td>Ustazah Noraini</td>
+                                                        <td>Ustazah Noraini</td>
                             <td>
                                 <div class="progress-indicator">
                                     <span class="progress-text">5/10</span>
@@ -485,17 +326,84 @@
                                     </div>
                                 </div>
                             </td>
-                            <td><span class="room-badge">Room A</span></td>
-                            <td><span class="badge badge-danger">No-Show</span></td>
-                            <td>Jan 18, 2025</td>
+                            <td><span class="badge badge-danger">No-Show (2)</span></td>
+                            <td>Jan 20, 2025</td>
                             <td>
                                 <div class="action-buttons">
-                                    <button class="btn-icon-small" title="View">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
                                             <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
                                         </svg>
+                                    </a>
+                                    <a href="edit-case.html" class="btn-icon-small" title="Edit">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </a>
+                                    <button class="btn-icon-small" title="Delete">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
                                     </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="case-id">#IST-2025-005</span></td>
+                                                        <td>Dr. Zainuddin Omar</td>
+                            <td>
+                                <div class="progress-indicator">
+                                    <span class="progress-text">2/10</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 20%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-success">Active</span></td>
+                            <td>Jan 24, 2025</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
+                                    <a href="edit-case.html" class="btn-icon-small" title="Edit">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
+                                        </svg>
+                                    </a>
+                                    <button class="btn-icon-small" title="Delete">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm5-1a1 1 0 00-1 1v6a1 1 0 102 0V8a1 1 0 00-1-1z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><span class="case-id">#IST-2024-089</span></td>
+                                                        <td>Dr. Ahmad Ibrahim</td>
+                            <td>
+                                <div class="progress-indicator">
+                                    <span class="progress-text">10/10</span>
+                                    <div class="progress-bar">
+                                        <div class="progress-fill" style="width: 100%"></div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td><span class="badge badge-info">Completed</span></td>
+                            <td>-</td>
+                            <td>
+                                <div class="action-buttons">
+                                    <a href="case-panel-details.html" class="btn-icon-small" title="View">
+                                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                                            <path d="M10 12a2 2 0 100-4 2 2 0 000 4z"/>
+                                            <path fill-rule="evenodd" d="M.458 10C1.732 5.943 5.522 3 10 3s8.268 2.943 9.542 7c-1.274 4.057-5.064 7-9.542 7S1.732 14.057.458 10zM14 10a4 4 0 11-8 0 4 4 0 018 0z" clip-rule="evenodd"/>
+                                        </svg>
+                                    </a>
                                     <a href="edit-case.html" class="btn-icon-small" title="Edit">
                                         <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                                             <path d="M13.586 3.586a2 2 0 112.828 2.828l-.793.793-2.828-2.828.793-.793zM11.379 5.793L3 14.172V17h2.828l8.38-8.379-2.83-2.828z"/>
@@ -513,162 +421,48 @@
                 </table>
             </div>
 
-            <!-- Calendar View (hidden by default) -->
-            <div class="calendar-container" id="calendarView" style="display: none;">
-                <div class="calendar-header">
-                    <button class="calendar-nav-btn" onclick="changeMonth(-1)">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+            <!-- Pagination -->
+            <div class="pagination">
+                <div class="pagination-info">
+                    Showing <strong>1-15</strong> of <strong>24</strong> cases
+                </div>
+                <div class="pagination-controls">
+                    <button class="pagination-btn" disabled>
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd"/>
                         </svg>
+                        Previous
                     </button>
-                    <h3 id="currentMonth">January 2025</h3>
-                    <button class="calendar-nav-btn" onclick="changeMonth(1)">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
+                    <div class="pagination-numbers">
+                        <button class="pagination-number active">1</button>
+                        <button class="pagination-number">2</button>
+                        <button class="pagination-number">3</button>
+                    </div>
+                    <button class="pagination-btn">
+                        Next
+                        <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
                             <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
                         </svg>
                     </button>
-                </div>
-                <div class="calendar-grid">
-                    <div class="calendar-weekdays">
-                        <div class="weekday">Sun</div>
-                        <div class="weekday">Mon</div>
-                        <div class="weekday">Tue</div>
-                        <div class="weekday">Wed</div>
-                        <div class="weekday">Thu</div>
-                        <div class="weekday">Fri</div>
-                        <div class="weekday">Sat</div>
-                    </div>
-                    <div class="calendar-days" id="calendarDays">
-                        <!-- Days will be generated by JavaScript -->
-                    </div>
                 </div>
             </div>
         </div>
     </main>
 
     <script>
-        // Make table rows clickable (except action column)
+        // Make table rows clickable (except checkbox and actions columns)
         document.querySelectorAll('.data-table tbody tr').forEach(row => {
             row.addEventListener('click', (e) => {
-                // Don't navigate if clicking on buttons or links
-                if (e.target.closest('.action-buttons') ||
-                    e.target.closest('.btn-link-small') ||
+                // Don't navigate if clicking on checkbox, buttons, or links
+                if (e.target.closest('.table-checkbox') ||
+                    e.target.closest('.action-buttons') ||
                     e.target.closest('a') ||
                     e.target.closest('button')) {
                     return;
                 }
-                window.location.href = 'case-details.html?from=sessions';
+                window.location.href = 'case-panel-details.html';
             });
         });
-
-        // Calendar View Toggle
-        let isCalendarView = false;
-        let currentDate = new Date(2025, 0, 1); // January 2025
-
-        // Session data for calendar
-        const sessions = [
-            { date: '2025-01-20', caseId: '#IST-2025-003', panel: 'Dr. Fatimah Zahra', room: 'Room A', status: 'in-progress', session: '7/10' },
-            { date: '2025-01-20', caseId: '#IST-2025-001', panel: 'Dr. Ahmad Ibrahim', room: 'Room B', status: 'scheduled', session: '3/10' },
-            { date: '2025-01-21', caseId: '#IST-2025-002', panel: 'Ustaz Hassan Ali', room: 'Room C', status: 'scheduled', session: '1/10' },
-            { date: '2025-01-22', caseId: '#IST-2025-005', panel: 'Dr. Zainuddin Omar', room: 'Room A', status: 'scheduled', session: '2/10' },
-            { date: '2025-01-23', caseId: '#IST-2025-004', panel: 'Ustazah Noraini', room: 'Room B', status: 'scheduled', session: '5/10' },
-            { date: '2025-01-24', caseId: '#IST-2025-003', panel: 'Dr. Fatimah Zahra', room: 'Room A', status: 'scheduled', session: '8/10' },
-            { date: '2025-01-27', caseId: '#IST-2025-001', panel: 'Dr. Ahmad Ibrahim', room: 'Room B', status: 'scheduled', session: '4/10' },
-            { date: '2025-01-28', caseId: '#IST-2025-002', panel: 'Ustaz Hassan Ali', room: 'Room C', status: 'scheduled', session: '2/10' },
-        ];
-
-        function toggleView() {
-            const tableView = document.getElementById('tableView');
-            const calendarView = document.getElementById('calendarView');
-            const calendarIcon = document.getElementById('calendarIcon');
-            const listIcon = document.getElementById('listIcon');
-            const toggleBtn = document.getElementById('toggleViewBtn');
-
-            isCalendarView = !isCalendarView;
-
-            if (isCalendarView) {
-                tableView.style.display = 'none';
-                calendarView.style.display = 'block';
-                calendarIcon.style.display = 'none';
-                listIcon.style.display = 'block';
-                toggleBtn.title = 'List View';
-                renderCalendar();
-            } else {
-                tableView.style.display = 'block';
-                calendarView.style.display = 'none';
-                calendarIcon.style.display = 'block';
-                listIcon.style.display = 'none';
-                toggleBtn.title = 'Calendar View';
-            }
-        }
-
-        function changeMonth(delta) {
-            currentDate.setMonth(currentDate.getMonth() + delta);
-            renderCalendar();
-        }
-
-        function renderCalendar() {
-            const monthNames = ['January', 'February', 'March', 'April', 'May', 'June',
-                'July', 'August', 'September', 'October', 'November', 'December'];
-
-            document.getElementById('currentMonth').textContent =
-                `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
-
-            const calendarDays = document.getElementById('calendarDays');
-            calendarDays.innerHTML = '';
-
-            const year = currentDate.getFullYear();
-            const month = currentDate.getMonth();
-
-            // First day of the month
-            const firstDay = new Date(year, month, 1).getDay();
-            // Number of days in month
-            const daysInMonth = new Date(year, month + 1, 0).getDate();
-
-            // Add empty cells for days before the first day
-            for (let i = 0; i < firstDay; i++) {
-                const emptyDay = document.createElement('div');
-                emptyDay.className = 'calendar-day empty';
-                calendarDays.appendChild(emptyDay);
-            }
-
-            // Add days of the month
-            for (let day = 1; day <= daysInMonth; day++) {
-                const dayElement = document.createElement('div');
-                dayElement.className = 'calendar-day';
-
-                const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(day).padStart(2, '0')}`;
-                const daySessions = sessions.filter(s => s.date === dateStr);
-
-                const dayNumber = document.createElement('span');
-                dayNumber.className = 'day-number';
-                dayNumber.textContent = day;
-                dayElement.appendChild(dayNumber);
-
-                if (daySessions.length > 0) {
-                    dayElement.classList.add('has-sessions');
-                    const sessionsContainer = document.createElement('div');
-                    sessionsContainer.className = 'day-sessions';
-
-                    daySessions.forEach(session => {
-                        const sessionItem = document.createElement('div');
-                        sessionItem.className = `session-item-calendar ${session.status}`;
-                        sessionItem.innerHTML = `
-                            <span class="session-case">${session.caseId}</span>
-                            <span class="session-room">${session.room}</span>
-                        `;
-                        sessionItem.onclick = () => {
-                            window.location.href = 'case-details.html?from=sessions';
-                        };
-                        sessionsContainer.appendChild(sessionItem);
-                    });
-
-                    dayElement.appendChild(sessionsContainer);
-                }
-
-                calendarDays.appendChild(dayElement);
-            }
-        }
     </script>
 </body>
 </html>

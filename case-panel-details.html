@@ -505,9 +505,11 @@
 
                   <!-- Generated Report -->
                   <div class="session-section">
-                    <h5>Session Report</h5>
-                    <div class="report-editor-header">
-                      <span class="badge badge-info">Auto-generated</span>
+                    <div class="section-header-row-with-action">
+                      <div class="section-header-left">
+                        <h5>Session Report</h5>
+                        <span class="badge badge-info">Auto-generated</span>
+                      </div>
                       <button
                         type="button"
                         class="btn-download-report"
@@ -625,9 +627,11 @@
                     </div>
                   </div>
                   <div class="session-section">
-                    <h5>Session Report</h5>
-                    <div class="report-editor-header">
-                      <span class="badge badge-info">Auto-generated</span>
+                    <div class="section-header-row-with-action">
+                      <div class="section-header-left">
+                        <h5>Session Report</h5>
+                        <span class="badge badge-info">Auto-generated</span>
+                      </div>
                       <button
                         type="button"
                         class="btn-download-report"
@@ -732,9 +736,11 @@
                     </div>
                   </div>
                   <div class="session-section">
-                    <h5>Session Report</h5>
-                    <div class="report-editor-header">
-                      <span class="badge badge-info">Auto-generated</span>
+                    <div class="section-header-row-with-action">
+                      <div class="section-header-left">
+                        <h5>Session Report</h5>
+                        <span class="badge badge-info">Auto-generated</span>
+                      </div>
                       <button
                         type="button"
                         class="btn-download-report"
@@ -841,16 +847,16 @@
                   <div class="session-section">
                     <div class="section-header-row">
                       <h5>Session Report</h5>
+                      <span class="badge badge-info">Auto-generated</span>
                     </div>
-                    <div class="empty-state">
-                      <p>
-                        Report will be generated after transcription is complete
-                      </p>
+                    <div class="quill-editor-container">
+                      <div class="quill-editor" id="session4Report" data-placeholder="Report will be generated after session is completed.">
+                      </div>
                     </div>
                   </div>
                   <div class="session-actions">
                     <button class="btn-secondary">Save</button>
-                    <button class="btn-primary">Complete</button>
+                    <button class="btn-primary btn-complete">Complete</button>
                   </div>
                 </div>
               </div>
@@ -1083,8 +1089,10 @@
 
       // Initialize Quill editors for session reports
       document.querySelectorAll(".quill-editor:not(#finalReportEditor)").forEach((editor, index) => {
+        const placeholder = editor.dataset.placeholder || "";
         new Quill(editor, {
           theme: "snow",
+          placeholder: placeholder,
           modules: {
             toolbar: [
               ["bold", "italic", "underline"],

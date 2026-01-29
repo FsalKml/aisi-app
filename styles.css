@@ -1556,7 +1556,7 @@ body {
 
 .panel-selection-card.selected {
     border-color: var(--primary);
-    background-color: rgba(59, 130, 246, 0.02);
+    background-color: rgba(59, 130, 246, 0.1);
 }
 
 .panel-selection-radio {
@@ -2069,7 +2069,7 @@ body {
 }
 
 .session-actions .btn-secondary {
-    width: 100px;
+    width: 150px;
     background-color: var(--primary);
     color: white;
     border: none;
@@ -2080,12 +2080,22 @@ body {
 }
 
 .session-actions .btn-primary {
-    width: 100px;
+    width: 150px;
+    background-color: var(--primary);
+    border-color: var(--primary);
+}
+
+.session-actions .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.session-actions .btn-primary.btn-complete {
     background-color: var(--success);
     border-color: var(--success);
 }
 
-.session-actions .btn-primary:hover {
+.session-actions .btn-primary.btn-complete:hover {
     background-color: #059669;
     border-color: #059669;
 }
@@ -2227,12 +2237,29 @@ body {
 /* Section Header Row */
 .section-header-row {
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    gap: 10px;
     margin-bottom: 12px;
 }
 
 .section-header-row h5 {
+    margin-bottom: 0;
+}
+
+.section-header-row-with-action {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.section-header-left {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.section-header-left h5 {
     margin-bottom: 0;
 }
 
@@ -2653,17 +2680,6 @@ body {
     width: 100%;
 }
 
-.info-row {
-    display: flex;
-    justify-content: space-between;
-    padding: 12px 0;
-    border-bottom: 1px solid var(--gray-200);
-}
-
-.info-row:last-child {
-    border-bottom: none;
-}
-
 .info-label {
     font-weight: 500;
     color: var(--gray-600);
@@ -2850,6 +2866,35 @@ body {
     margin-bottom: 6px;
 }
 
+/* Plaintiff Information spacing */
+.edit-case-form .card-body > .form-group {
+    margin-bottom: 16px;
+}
+
+.edit-case-form .card-body > .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.edit-case-form .card-body > .form-group:last-child,
+.edit-case-form .card-body > .form-row:last-child {
+    margin-bottom: 0;
+}
+
+.edit-case-form .form-actions {
+    margin-top: 0;
+}
+
+.edit-case-form .form-actions .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    text-decoration: none;
+}
+
 /* Audio Reupload Area */
 .audio-reupload-area {
     display: flex;
@@ -2862,6 +2907,30 @@ body {
     border-radius: 8px;
     padding: 12px 16px;
     border: 1px solid var(--gray-200);
+}
+
+/* Clickable Audio */
+.audio-clickable {
+    position: relative;
+}
+
+.audio-clickable .file-input {
+    display: none;
+}
+
+.current-audio-label {
+    display: block;
+    background-color: white;
+    border-radius: 8px;
+    padding: 12px 16px;
+    border: 1px solid var(--gray-200);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.current-audio-label:hover {
+    border-color: var(--primary);
+    background-color: rgba(59, 130, 246, 0.05);
 }
 
 .audio-upload-area.compact {
@@ -2889,6 +2958,18 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
+}
+
+.panel-selection-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 8px;
+}
+
+.panel-selection-actions .btn-primary {
+    width: 100px;
+    padding: 10px 0;
+    text-align: center;
 }
 
 /* Form Actions Bottom */

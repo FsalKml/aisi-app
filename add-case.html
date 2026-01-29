@@ -171,19 +171,32 @@
                     <p class="form-section-desc">Please review the information extracted from the uploaded document</p>
 
                     <div class="extracted-fields">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label for="plaintiffName">Plaintiff Name</label>
-                                <input type="text" id="plaintiffName" value="Ahmad bin Abdullah" class="form-input">
-                            </div>
+                        <!-- Plaintiff Name (full width) -->
+                        <div class="form-group full-width">
+                            <label for="plaintiffName">Plaintiff Name</label>
+                            <input type="text" id="plaintiffName" value="Ahmad bin Abdullah" class="form-input">
+                        </div>
 
+                        <!-- IC | Age -->
+                        <div class="form-row">
                             <div class="form-group">
                                 <label for="icNumber">IC Number</label>
                                 <input type="text" id="icNumber" value="901215-10-5847" class="form-input">
                             </div>
+
+                            <div class="form-group">
+                                <label for="age">Age</label>
+                                <input type="text" id="age" value="34" class="form-input">
+                            </div>
                         </div>
 
+                        <!-- Phone No | Race -->
                         <div class="form-row">
+                            <div class="form-group">
+                                <label for="phoneNumber">Phone Number</label>
+                                <input type="text" id="phoneNumber" value="012-3456789" class="form-input">
+                            </div>
+
                             <div class="form-group">
                                 <label for="race">Race</label>
                                 <select id="race" class="form-input">
@@ -199,17 +212,23 @@
                                     <option value="other">Other</option>
                                 </select>
                             </div>
-
-                            <div class="form-group">
-                                <label for="age">Age</label>
-                                <input type="text" id="age" value="34" class="form-input">
-                            </div>
                         </div>
 
+                        <!-- Education | Occupation -->
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="phoneNumber">Phone Number</label>
-                                <input type="text" id="phoneNumber" value="012-3456789" class="form-input">
+                                <label for="educationLevel">Education Level</label>
+                                <select id="educationLevel" class="form-input">
+                                    <option value="">Select Education Level</option>
+                                    <option value="primary">Primary School</option>
+                                    <option value="secondary">Secondary School</option>
+                                    <option value="spm">SPM</option>
+                                    <option value="stpm">STPM</option>
+                                    <option value="diploma">Diploma</option>
+                                    <option value="degree" selected>Degree</option>
+                                    <option value="masters">Masters</option>
+                                    <option value="phd">PhD</option>
+                                </select>
                             </div>
 
                             <div class="form-group">
@@ -218,39 +237,19 @@
                             </div>
                         </div>
 
+                        <!-- Address 1 (full width) -->
                         <div class="form-group full-width">
                             <label for="address1">Address 1</label>
                             <input type="text" id="address1" value="No. 123, Jalan Merdeka" class="form-input">
                         </div>
 
+                        <!-- Address 2 (full width) -->
                         <div class="form-group full-width">
                             <label for="address2">Address 2</label>
                             <input type="text" id="address2" value="Taman Harmoni" class="form-input">
                         </div>
 
-                        <div class="form-group full-width">
-                            <label for="state">State</label>
-                            <select id="state" class="form-input">
-                                <option value="">Select State</option>
-                                <option value="johor">Johor</option>
-                                <option value="kedah">Kedah</option>
-                                <option value="kelantan">Kelantan</option>
-                                <option value="melaka">Melaka</option>
-                                <option value="negeri-sembilan">Negeri Sembilan</option>
-                                <option value="pahang">Pahang</option>
-                                <option value="penang">Penang</option>
-                                <option value="perak">Perak</option>
-                                <option value="perlis">Perlis</option>
-                                <option value="sabah">Sabah</option>
-                                <option value="sarawak">Sarawak</option>
-                                <option value="selangor" selected>Selangor</option>
-                                <option value="terengganu">Terengganu</option>
-                                <option value="wp-kuala-lumpur">WP Kuala Lumpur</option>
-                                <option value="wp-labuan">WP Labuan</option>
-                                <option value="wp-putrajaya">WP Putrajaya</option>
-                            </select>
-                        </div>
-
+                        <!-- Postcode | City -->
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="postcode">Postcode</label>
@@ -263,24 +262,38 @@
                             </div>
                         </div>
 
-                        <div class="form-group full-width">
-                            <label for="country">Country</label>
-                            <input type="text" id="country" value="Malaysia" class="form-input">
+                        <!-- State | Country -->
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="state">State</label>
+                                <select id="state" class="form-input">
+                                    <option value="">Select State</option>
+                                    <option value="johor">Johor</option>
+                                    <option value="kedah">Kedah</option>
+                                    <option value="kelantan">Kelantan</option>
+                                    <option value="melaka">Melaka</option>
+                                    <option value="negeri-sembilan">Negeri Sembilan</option>
+                                    <option value="pahang">Pahang</option>
+                                    <option value="penang">Penang</option>
+                                    <option value="perak">Perak</option>
+                                    <option value="perlis">Perlis</option>
+                                    <option value="sabah">Sabah</option>
+                                    <option value="sarawak">Sarawak</option>
+                                    <option value="selangor" selected>Selangor</option>
+                                    <option value="terengganu">Terengganu</option>
+                                    <option value="wp-kuala-lumpur">WP Kuala Lumpur</option>
+                                    <option value="wp-labuan">WP Labuan</option>
+                                    <option value="wp-putrajaya">WP Putrajaya</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input type="text" id="country" value="Malaysia" class="form-input">
+                            </div>
                         </div>
 
-                        <div class="form-group full-width">
-                            <label for="educationLevel">Education Level</label>
-                            <select id="educationLevel" class="form-input">
-                                <option value="">Select Education Level</option>
-                                <option value="primary">Primary School</option>
-                                <option value="secondary">Secondary School</option>
-                                <option value="diploma">Diploma</option>
-                                <option value="degree" selected>Degree</option>
-                                <option value="master">Master</option>
-                                <option value="phd">PhD</option>
-                            </select>
-                        </div>
-
+                        <!-- Case Description (full width) -->
                         <div class="form-group full-width">
                             <label for="caseDescription">Case Description</label>
                             <textarea id="caseDescription" class="form-textarea" rows="7">Pemohon ingin menukar agama kepada Kristian. Beliau menyatakan telah menghadiri gereja bersama rakan sekerja sejak 2 tahun lalu dan merasakan lebih tenang dengan ajaran tersebut. Pemohon juga menyatakan kurang mendapat didikan agama Islam semasa kecil dan tidak mempunyai hubungan rapat dengan keluarga Muslim.</textarea>
@@ -301,10 +314,7 @@
                             </svg>
                             Recommended Panel
                         </div>
-                        <div class="panel-selection-card selected" id="recommendedPanelCard">
-                            <div class="panel-selection-radio">
-                                <input type="radio" name="panelSelection" id="recommendedPanel" value="recommended" checked>
-                            </div>
+                        <div class="panel-selection-card" id="recommendedPanelCard">
                             <img src="https://ui-avatars.com/api/?name=Dr+Ahmad+Ibrahim&background=3B82F6&color=fff" alt="Panel" class="panel-selection-avatar">
                             <div class="panel-selection-info">
                                 <h4>Dr. Ahmad Ibrahim</h4>
@@ -341,9 +351,6 @@
                         <h4 class="other-panels-title">Available Panels</h4>
 
                         <div class="panel-selection-card" data-panel="panel2">
-                            <div class="panel-selection-radio">
-                                <input type="radio" name="panelSelection" id="panel2" value="panel2">
-                            </div>
                             <img src="https://ui-avatars.com/api/?name=Ustaz+Hassan+Ali&background=10B981&color=fff" alt="Panel" class="panel-selection-avatar">
                             <div class="panel-selection-info">
                                 <h4>Ustaz Hassan Ali</h4>
@@ -365,9 +372,6 @@
                         </div>
 
                         <div class="panel-selection-card" data-panel="panel3">
-                            <div class="panel-selection-radio">
-                                <input type="radio" name="panelSelection" id="panel3" value="panel3">
-                            </div>
                             <img src="https://ui-avatars.com/api/?name=Dr+Fatimah+Zahra&background=8B5CF6&color=fff" alt="Panel" class="panel-selection-avatar">
                             <div class="panel-selection-info">
                                 <h4>Dr. Fatimah Zahra</h4>
@@ -389,9 +393,6 @@
                         </div>
 
                         <div class="panel-selection-card" data-panel="panel4">
-                            <div class="panel-selection-radio">
-                                <input type="radio" name="panelSelection" id="panel4" value="panel4">
-                            </div>
                             <img src="https://ui-avatars.com/api/?name=Ustazah+Noraini&background=F59E0B&color=fff" alt="Panel" class="panel-selection-avatar">
                             <div class="panel-selection-info">
                                 <h4>Ustazah Noraini</h4>
@@ -541,39 +542,61 @@
                     </svg>
                     Change to Different Panel
                 `;
-                // Reset to recommended panel
-                document.getElementById('recommendedPanel').checked = true;
-                updatePanelSelection();
+                updateRecommendedPanel();
             }
         });
 
-        // Panel Selection
-        const panelCards = document.querySelectorAll('.panel-selection-card');
-        const panelRadios = document.querySelectorAll('input[name="panelSelection"]');
+        // Panel Selection - clicking on a panel in the list updates the recommended panel
+        const otherPanelCards = document.querySelectorAll('#otherPanelsList .panel-selection-card');
 
-        panelRadios.forEach(radio => {
-            radio.addEventListener('change', updatePanelSelection);
-        });
+        otherPanelCards.forEach(card => {
+            card.addEventListener('click', () => {
+                // Get clicked panel info
+                const name = card.querySelector('.panel-selection-info h4').textContent;
+                const role = card.querySelector('.panel-selection-info p').textContent;
+                const avatarSrc = card.querySelector('.panel-selection-avatar').src;
+                const matchValue = card.querySelector('.match-value').textContent;
+                const activeCases = card.querySelector('.stat-item').textContent.trim();
 
-        panelCards.forEach(card => {
-            card.addEventListener('click', (e) => {
-                if (e.target.type !== 'radio') {
-                    const radio = card.querySelector('input[type="radio"]');
-                    radio.checked = true;
-                    updatePanelSelection();
-                }
+                // Update recommended panel card
+                const recommendedCard = document.getElementById('recommendedPanelCard');
+                recommendedCard.querySelector('.panel-selection-avatar').src = avatarSrc;
+                recommendedCard.querySelector('.panel-selection-info h4').textContent = name;
+                recommendedCard.querySelector('.panel-selection-info p').textContent = role;
+                recommendedCard.querySelector('.match-value').textContent = matchValue;
+                recommendedCard.querySelector('.stat-item').innerHTML = `
+                    <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                        <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                        <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"/>
+                    </svg>
+                    ${activeCases}
+                `;
+
+                // Hide the panel list and reset button
+                otherPanelsList.style.display = 'none';
+                changePanelBtn.innerHTML = `
+                    <svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clip-rule="evenodd"/>
+                    </svg>
+                    Change to Different Panel
+                `;
             });
         });
 
-        function updatePanelSelection() {
-            panelCards.forEach(card => {
-                const radio = card.querySelector('input[type="radio"]');
-                if (radio.checked) {
-                    card.classList.add('selected');
-                } else {
-                    card.classList.remove('selected');
-                }
-            });
+        function updateRecommendedPanel() {
+            // Reset to default recommended panel
+            const recommendedCard = document.getElementById('recommendedPanelCard');
+            recommendedCard.querySelector('.panel-selection-avatar').src = 'https://ui-avatars.com/api/?name=Dr+Ahmad+Ibrahim&background=3B82F6&color=fff';
+            recommendedCard.querySelector('.panel-selection-info h4').textContent = 'Dr. Ahmad Ibrahim';
+            recommendedCard.querySelector('.panel-selection-info p').textContent = 'Senior Panel Member';
+            recommendedCard.querySelector('.match-value').textContent = '92%';
+            recommendedCard.querySelector('.stat-item').innerHTML = `
+                <svg width="14" height="14" viewBox="0 0 20 20" fill="currentColor">
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                    <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5z" clip-rule="evenodd"/>
+                </svg>
+                12 Active Cases
+            `;
         }
     </script>
 </body>

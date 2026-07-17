@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AISI - Case Details</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
     <!-- Quill Editor -->
     <link
       href="https://cdn.quilljs.com/1.3.7/quill.snow.css"
@@ -57,7 +57,7 @@
     <!-- Sidebar Navigation -->
     <aside class="sidebar">
       <nav class="sidebar-nav">
-        <a href="dashboard.html" class="nav-item" data-menu="dashboard">
+        <a href="dashboard.html" class="nav-item" data-menu="dashboard" data-roles="superadmin,admin,panel">
           <svg
             class="nav-icon"
             width="20"
@@ -72,7 +72,7 @@
           <span>Dashboard</span>
         </a>
 
-        <a href="cases.html" class="nav-item" data-menu="cases">
+        <a href="cases.html" class="nav-item" data-menu="cases" data-roles="admin">
           <svg
             class="nav-icon"
             width="20"
@@ -90,7 +90,7 @@
           <span>Cases</span>
         </a>
 
-        <a href="cases-panel.html" class="nav-item">
+        <a href="cases-panel.html" class="nav-item" data-roles="panel">
           <svg
             class="nav-icon"
             width="20"
@@ -105,10 +105,10 @@
               clip-rule="evenodd"
             />
           </svg>
-          <span>Cases (Panel)</span>
+          <span>Cases</span>
         </a>
 
-        <a href="panel.html" class="nav-item">
+        <a href="panel.html" class="nav-item" data-roles="admin">
           <svg
             class="nav-icon"
             width="20"
@@ -123,7 +123,7 @@
           <span>Panel / Kaunselor</span>
         </a>
 
-        <a href="sessions.html" class="nav-item" data-menu="sessions">
+        <a href="sessions.html" class="nav-item" data-menu="sessions" data-roles="admin,panel">
           <svg
             class="nav-icon"
             width="20"
@@ -138,7 +138,7 @@
           <span>Sessions</span>
         </a>
 
-        <a href="room.html" class="nav-item">
+        <a href="room.html" class="nav-item" data-roles="admin">
           <svg
             class="nav-icon"
             width="20"
@@ -155,7 +155,7 @@
           <span>Room</span>
         </a>
 
-        <a href="reports.html" class="nav-item" data-menu="reports">
+        <a href="reports.html" class="nav-item" data-menu="reports" data-roles="admin">
           <svg
             class="nav-icon"
             width="20"
@@ -172,7 +172,7 @@
           <span>Reports</span>
         </a>
 
-        <a href="archive.html" class="nav-item" data-menu="archive">
+        <a href="archive.html" class="nav-item" data-menu="archive" data-roles="admin">
           <svg
             class="nav-icon"
             width="20"
@@ -192,7 +192,7 @@
 
         <div class="nav-divider"></div>
 
-        <a href="users.html" class="nav-item">
+        <a href="users.html" class="nav-item" data-roles="superadmin">
           <svg
             class="nav-icon"
             width="20"
@@ -205,7 +205,7 @@
           <span>Users</span>
         </a>
 
-        <a href="settings.html" class="nav-item">
+        <a href="settings.html" class="nav-item" data-roles="superadmin,admin,panel">
           <svg
             class="nav-icon"
             width="20"
@@ -224,7 +224,7 @@
       </nav>
 
       <div class="sidebar-footer">
-        <a href="index.html" class="nav-item">
+        <a href="../index.html" class="nav-item">
           <svg
             class="nav-icon"
             width="20"
@@ -943,9 +943,14 @@
                       </div>
                     </div>
                   </div>
-                  <div class="session-actions">
-                    <button class="btn-secondary">Save</button>
-                    <button class="btn-primary btn-complete">Complete</button>
+                  <div class="session-actions-with-noshow">
+                    <div class="session-actions-left">
+                      <button class="btn-noshow">No Show</button>
+                    </div>
+                    <div class="session-actions-right">
+                      <button class="btn-secondary">Save</button>
+                      <button class="btn-primary btn-complete">Complete</button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1506,5 +1511,6 @@
         alert("Schedule has been sent to the panel. Waiting for panel confirmation.");
       }
     </script>
-  </body>
+      <script src="../js/auth.js"></script>
+</body>
 </html>

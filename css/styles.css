@@ -85,6 +85,16 @@ body {
     margin-bottom: 24px;
 }
 
+.login-error {
+    background: #FEE2E2;
+    color: #B91C1C;
+    border: 1px solid #FCA5A5;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
 .form-group {
     margin-bottom: 20px;
 }
@@ -111,6 +121,45 @@ body {
     outline: none;
     border-color: var(--primary);
     box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.password-input-wrapper {
+    position: relative;
+}
+
+.password-input-wrapper input {
+    padding-right: 42px;
+}
+
+.password-toggle-btn {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: none;
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+    color: var(--gray-500, #6b7280);
+}
+
+.password-toggle-btn:hover {
+    color: var(--gray-700, #374151);
+}
+
+.password-toggle-btn .icon-eye-off {
+    display: none;
+}
+
+.password-toggle-btn.showing .icon-eye {
+    display: none;
+}
+
+.password-toggle-btn.showing .icon-eye-off {
+    display: block;
 }
 
 .form-options {
@@ -2096,6 +2145,94 @@ body {
 }
 
 .session-actions .btn-primary.btn-complete:hover {
+    background-color: #059669;
+    border-color: #059669;
+}
+
+/* No Show Button */
+.btn-noshow {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    background-color: var(--danger);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.15s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-noshow:hover {
+    background-color: #DC2626;
+}
+
+.btn-noshow:active {
+    transform: scale(0.98);
+}
+
+/* Session Actions with No Show */
+.session-actions-with-noshow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--gray-200);
+}
+
+.session-actions-with-noshow .session-actions-left {
+    display: flex;
+    gap: 12px;
+}
+
+.session-actions-with-noshow .session-actions-right {
+    display: flex;
+    gap: 12px;
+}
+
+.session-actions-with-noshow .btn-secondary {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-actions-with-noshow .btn-secondary:hover {
+    background-color: var(--primary-dark);
+}
+
+.session-actions-with-noshow .btn-primary {
+    width: 100px;
+    height: 40px;
+    padding: 0;
+    background-color: var(--primary);
+    border-color: var(--primary);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.session-actions-with-noshow .btn-primary:hover {
+    background-color: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.session-actions-with-noshow .btn-primary.btn-complete {
+    background-color: var(--success);
+    border-color: var(--success);
+}
+
+.session-actions-with-noshow .btn-primary.btn-complete:hover {
     background-color: #059669;
     border-color: #059669;
 }
